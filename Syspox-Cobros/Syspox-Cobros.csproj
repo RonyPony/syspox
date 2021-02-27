@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{607F6092-8CF3-431A-ABCF-E1DD0E8E4F4C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Syspox_Cobros</RootNamespace>
+    <AssemblyName>Syspox-Cobros</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\tmp\published\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://ronycruz.myartsonline.com/updater/syspox/</UpdateUrl>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>7B90AA4BF3B8FCB80EC79E46D695B35A41B09909</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Syspox-Cobros_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="controls\boton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="controls\boton.Designer.cs">
+      <DependentUpon>boton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="data.cs" />
+    <Compile Include="UI\BASEFORM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BASEFORM.Designer.cs">
+      <DependentUpon>BASEFORM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\consultarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\consultarClientes.Designer.cs">
+      <DependentUpon>consultarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\consultarDirecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\consultarDirecciones.Designer.cs">
+      <DependentUpon>consultarDirecciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\consultarPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\consultarPagos.Designer.cs">
+      <DependentUpon>consultarPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\devoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\devoluciones.Designer.cs">
+      <DependentUpon>devoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LOGIN.Designer.cs">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\mainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\mainMenu.Designer.cs">
+      <DependentUpon>mainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\nuevaDireccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\nuevaDireccion.Designer.cs">
+      <DependentUpon>nuevaDireccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\nuevoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\nuevoCliente.Designer.cs">
+      <DependentUpon>nuevoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\nuevopago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\nuevopago.Designer.cs">
+      <DependentUpon>nuevopago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\reportes.Designer.cs">
+      <DependentUpon>reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\selector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\selector.Designer.cs">
+      <DependentUpon>selector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\splash.Designer.cs">
+      <DependentUpon>splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="controls\boton.resx">
+      <DependentUpon>boton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\BASEFORM.resx">
+      <DependentUpon>BASEFORM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\consultarClientes.resx">
+      <DependentUpon>consultarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\consultarDirecciones.resx">
+      <DependentUpon>consultarDirecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\consultarPagos.resx">
+      <DependentUpon>consultarPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\devoluciones.resx">
+      <DependentUpon>devoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LOGIN.resx">
+      <DependentUpon>LOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\mainMenu.resx">
+      <DependentUpon>mainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\nuevaDireccion.resx">
+      <DependentUpon>nuevaDireccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\nuevoCliente.resx">
+      <DependentUpon>nuevoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\nuevopago.resx">
+      <DependentUpon>nuevopago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\reportes.resx">
+      <DependentUpon>reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\selector.resx">
+      <DependentUpon>selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\splash.resx">
+      <DependentUpon>splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Syspox-Cobros_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipse 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_gps_not_fixed_black_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mask Group 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point_of_sale-24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_add_alt-24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_location_alt-24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gps_fixed-24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview-24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyboard_return-24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payments-24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 54.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
