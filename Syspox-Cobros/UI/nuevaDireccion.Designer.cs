@@ -30,21 +30,21 @@
         {
             this.boton2 = new Syspox_Cobros.controls.boton();
             this.boton1 = new Syspox_Cobros.controls.boton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtcalle = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtnumero = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtmanzana = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtsector = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtmunicipio = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtmonto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtcomentarios = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -84,16 +84,17 @@
             this.boton1.Text = "GUARDAR";
             this.boton1.texto = "GUARDAR";
             this.boton1.UseVisualStyleBackColor = false;
+            this.boton1.Click += new System.EventHandler(this.boton1_Click);
             // 
-            // textBox2
+            // txtcalle
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Green;
-            this.textBox2.Location = new System.Drawing.Point(231, 153);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 30);
-            this.textBox2.TabIndex = 43;
+            this.txtcalle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtcalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcalle.ForeColor = System.Drawing.Color.Green;
+            this.txtcalle.Location = new System.Drawing.Point(231, 153);
+            this.txtcalle.Name = "txtcalle";
+            this.txtcalle.Size = new System.Drawing.Size(188, 30);
+            this.txtcalle.TabIndex = 43;
             // 
             // label4
             // 
@@ -107,15 +108,15 @@
             this.label4.TabIndex = 42;
             this.label4.Text = "CALLE";
             // 
-            // textBox1
+            // txtnombre
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Green;
-            this.textBox1.Location = new System.Drawing.Point(212, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 30);
-            this.textBox1.TabIndex = 41;
+            this.txtnombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnombre.ForeColor = System.Drawing.Color.Green;
+            this.txtnombre.Location = new System.Drawing.Point(212, 108);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(188, 30);
+            this.txtnombre.TabIndex = 41;
             // 
             // label3
             // 
@@ -129,15 +130,15 @@
             this.label3.TabIndex = 40;
             this.label3.Text = "NOMBRE";
             // 
-            // textBox3
+            // txtnumero
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Green;
-            this.textBox3.Location = new System.Drawing.Point(582, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 30);
-            this.textBox3.TabIndex = 58;
+            this.txtnumero.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtnumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnumero.ForeColor = System.Drawing.Color.Green;
+            this.txtnumero.Location = new System.Drawing.Point(582, 109);
+            this.txtnumero.Name = "txtnumero";
+            this.txtnumero.Size = new System.Drawing.Size(188, 30);
+            this.txtnumero.TabIndex = 58;
             // 
             // label1
             // 
@@ -151,15 +152,15 @@
             this.label1.TabIndex = 57;
             this.label1.Text = "NUMERO";
             // 
-            // textBox4
+            // txtmanzana
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Green;
-            this.textBox4.Location = new System.Drawing.Point(592, 168);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(188, 30);
-            this.textBox4.TabIndex = 60;
+            this.txtmanzana.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtmanzana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmanzana.ForeColor = System.Drawing.Color.Green;
+            this.txtmanzana.Location = new System.Drawing.Point(592, 168);
+            this.txtmanzana.Name = "txtmanzana";
+            this.txtmanzana.Size = new System.Drawing.Size(188, 30);
+            this.txtmanzana.TabIndex = 60;
             // 
             // label2
             // 
@@ -173,15 +174,15 @@
             this.label2.TabIndex = 59;
             this.label2.Text = "MANZANA";
             // 
-            // textBox5
+            // txtsector
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Green;
-            this.textBox5.Location = new System.Drawing.Point(592, 219);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(188, 30);
-            this.textBox5.TabIndex = 62;
+            this.txtsector.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtsector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsector.ForeColor = System.Drawing.Color.Green;
+            this.txtsector.Location = new System.Drawing.Point(592, 219);
+            this.txtsector.Name = "txtsector";
+            this.txtsector.Size = new System.Drawing.Size(188, 30);
+            this.txtsector.TabIndex = 62;
             // 
             // label5
             // 
@@ -195,15 +196,15 @@
             this.label5.TabIndex = 61;
             this.label5.Text = "SECTOR";
             // 
-            // textBox6
+            // txtmunicipio
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.Green;
-            this.textBox6.Location = new System.Drawing.Point(614, 274);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(188, 30);
-            this.textBox6.TabIndex = 64;
+            this.txtmunicipio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtmunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmunicipio.ForeColor = System.Drawing.Color.Green;
+            this.txtmunicipio.Location = new System.Drawing.Point(614, 274);
+            this.txtmunicipio.Name = "txtmunicipio";
+            this.txtmunicipio.Size = new System.Drawing.Size(188, 30);
+            this.txtmunicipio.TabIndex = 64;
             // 
             // label6
             // 
@@ -217,15 +218,15 @@
             this.label6.TabIndex = 63;
             this.label6.Text = "MUNICIPIO";
             // 
-            // textBox7
+            // txtmonto
             // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.Green;
-            this.textBox7.Location = new System.Drawing.Point(231, 235);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(188, 30);
-            this.textBox7.TabIndex = 66;
+            this.txtmonto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtmonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmonto.ForeColor = System.Drawing.Color.Green;
+            this.txtmonto.Location = new System.Drawing.Point(231, 235);
+            this.txtmonto.Name = "txtmonto";
+            this.txtmonto.Size = new System.Drawing.Size(188, 30);
+            this.txtmonto.TabIndex = 66;
             // 
             // label7
             // 
@@ -239,16 +240,16 @@
             this.label7.TabIndex = 65;
             this.label7.Text = "MONTO A\r\nPAGAR POR\r\nMES";
             // 
-            // textBox8
+            // txtcomentarios
             // 
-            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.Green;
-            this.textBox8.Location = new System.Drawing.Point(138, 423);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(804, 127);
-            this.textBox8.TabIndex = 68;
+            this.txtcomentarios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtcomentarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcomentarios.ForeColor = System.Drawing.Color.Green;
+            this.txtcomentarios.Location = new System.Drawing.Point(138, 423);
+            this.txtcomentarios.Multiline = true;
+            this.txtcomentarios.Name = "txtcomentarios";
+            this.txtcomentarios.Size = new System.Drawing.Size(804, 127);
+            this.txtcomentarios.TabIndex = 68;
             // 
             // label8
             // 
@@ -278,48 +279,48 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 654);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtcomentarios);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtmonto);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtmunicipio);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtsector);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtmanzana);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtnumero);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.boton2);
             this.Controls.Add(this.boton1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtcalle);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.label3);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "nuevaDireccion";
             this.Text = "nuevaDireccion";
             this.Load += new System.EventHandler(this.nuevaDireccion_Load);
             this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
+            this.Controls.SetChildIndex(this.txtnombre, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
+            this.Controls.SetChildIndex(this.txtcalle, 0);
             this.Controls.SetChildIndex(this.pictureBox2, 0);
             this.Controls.SetChildIndex(this.boton1, 0);
             this.Controls.SetChildIndex(this.boton2, 0);
             this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.textBox3, 0);
+            this.Controls.SetChildIndex(this.txtnumero, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.textBox4, 0);
+            this.Controls.SetChildIndex(this.txtmanzana, 0);
             this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.textBox5, 0);
+            this.Controls.SetChildIndex(this.txtsector, 0);
             this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.textBox6, 0);
+            this.Controls.SetChildIndex(this.txtmunicipio, 0);
             this.Controls.SetChildIndex(this.label7, 0);
-            this.Controls.SetChildIndex(this.textBox7, 0);
+            this.Controls.SetChildIndex(this.txtmonto, 0);
             this.Controls.SetChildIndex(this.label8, 0);
-            this.Controls.SetChildIndex(this.textBox8, 0);
+            this.Controls.SetChildIndex(this.txtcomentarios, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -331,21 +332,21 @@
         private controls.boton boton2;
         private controls.boton boton1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtcalle;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtnumero;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtmanzana;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtsector;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtmunicipio;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtmonto;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtcomentarios;
         private System.Windows.Forms.Label label8;
     }
 }

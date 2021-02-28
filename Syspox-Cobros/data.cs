@@ -16,6 +16,76 @@ namespace Syspox_Cobros
         SqlConnection con = new SqlConnection(@"Server="+Syspox_Cobros.Properties.Settings.Default.servername+";Database=syspox;User Id=syspox;Password=syspox1234;");
         public string activeUserId = "No Identificado";
 
+        internal string getSingleField(string campo,string table,string conditionals)
+        {
+            try
+            {
+                if (conditionals == string.Empty)
+                {
+                    conditionals = "1=1";
+                }
+                abrir();
+                DataTable dt = new DataTable();
+                string consulta = "select "+campo+" from "+table+" where "+conditionals+";";
+                SqlCommand comando = new SqlCommand(consulta, ver());
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable dl = new DataTable();
+                adaptador.Fill(dl);
+                if (dl.Rows.Count == 1)
+                {
+                    string tipo = dl.Rows[0][0].ToString().ToUpper();
+                    return tipo;
+                }
+                else
+                {
+                    return null;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                cerrar();
+            }
+        }
+
+        internal string getAdress(string id)
+        {
+            try
+            {
+                abrir();
+                DataTable dt = new DataTable();
+                string consulta = "select nombre from direcciones where id="+id;
+                SqlCommand comando = new SqlCommand(consulta, ver());
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable dl = new DataTable();
+                adaptador.Fill(dl);
+                if (dl.Rows.Count == 1)
+                {
+                    string tipo = dl.Rows[0][0].ToString().ToUpper();
+                    return tipo;
+                }
+                else
+                {
+                    return null;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                cerrar();
+            }
+        }
+
         public bool probar()
         {
             try

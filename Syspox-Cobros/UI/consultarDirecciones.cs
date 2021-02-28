@@ -12,6 +12,7 @@ namespace Syspox_Cobros.UI
 {
     public partial class consultarDirecciones : UI.BASEFORM
     {
+        data data = new data();
         public consultarDirecciones()
         {
             InitializeComponent();
@@ -20,6 +21,12 @@ namespace Syspox_Cobros.UI
         private void consultarDirecciones_Load(object sender, EventArgs e)
         {
             this.titulo = "consultar direcciones";
+            cargar();
+        }
+
+        private void cargar()
+        {
+            dataGridView1.DataSource = data.getTable("direcciones",string.Empty);
         }
 
         private void boton2_Click(object sender, EventArgs e)

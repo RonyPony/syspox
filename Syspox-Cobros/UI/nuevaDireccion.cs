@@ -26,5 +26,20 @@ namespace Syspox_Cobros.UI
         {
             this.Close();
         }
+
+        private void boton1_Click(object sender, EventArgs e)
+        {
+                data data = new data();
+                if (data.save("direcciones", "nombre,calle,numero,manzana,sector,municipio,monto,comentarios", "'" + txtnombre.Text + "','" + txtcalle.Text + "','" + txtnumero.Text + "','" + txtmanzana.Text + "','" + txtsector.Text + "','" + txtmunicipio.Text + "','" + txtmonto.Text + "','" + txtcomentarios.Text + "'"))
+                {
+                    MessageBox.Show("Direccion Registrado");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido registrar la direccion.");
+                }
+           
+        }
     }
 }

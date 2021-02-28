@@ -16,7 +16,7 @@ namespace Syspox_Cobros
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new splash());
+            Application.Run(new UI.mainMenu());
         }
     }
 }

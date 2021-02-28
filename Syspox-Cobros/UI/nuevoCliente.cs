@@ -12,9 +12,27 @@ namespace Syspox_Cobros.UI
 {
     public partial class nuevoCliente : UI.BASEFORM
     {
-        public nuevoCliente()
+        data data = new data();
+        int id = 0;
+        public nuevoCliente(int idh = 0)
         {
             InitializeComponent();
+            if (idh!=0)
+            {
+                id = idh;
+                cargar(idh);
+            }
+        }
+
+        private void cargar(int id)
+        {
+            txtcedula.Text = data.getSingleField("cedula","clientes","id='"+id+"'");
+            txtnombre.Text = data.getSingleField("nombre","clientes","id='"+id+"'");
+            txttel.Text = data.getSingleField("telefono","clientes","id='"+id+"'");
+            txtcelular.Text = data.getSingleField("celular","clientes","id='"+id+"'");
+            txtdireccion.Text = data.getSingleField("addressid", "clientes", "id='" + id + "'");
+            txtcomentario.Text = data.getSingleField("comentario","clientes","id='"+id+"'");
+            lbldireccion.Text = data.getAdress(txtdireccion.Text);
         }
 
         private void nuevoCliente_Load(object sender, EventArgs e)
@@ -31,19 +49,46 @@ namespace Syspox_Cobros.UI
         {
             if (txtcedula.Text !="" && txtnombre.Text !="")
             {
-                data data = new data();
-                if (data.save("clientes", "cedula,nombre,addressid,telefono,celular,comentario", "'" + txtcedula.Text + "','" + txtnombre.Text + "','" + txtdireccion.Text + "','" + txttel.Text + "','" + txtcelular.Text + "','" + txtcomentario.Text + "'"))
+                if (id == 0)
                 {
-                    MessageBox.Show("Cliente Registrado");
-                    this.Close();
-                }else{
-                    MessageBox.Show("No se ha podido registrar el cliente.");
+                    data data = new data();
+                    if (data.save("clientes", "cedula,nombre,addressid,telefono,celular,comentario", "'" + txtcedula.Text + "','" + txtnombre.Text + "','" + txtdireccion.Text + "','" + txttel.Text + "','" + txtcelular.Text + "','" + txtcomentario.Text + "'"))
+                    {
+                        MessageBox.Show("Cliente Registrado");
+
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido registrar el cliente.");
+                    }
+                }
+                else
+                {
+                    data data = new data();
+                    if (data.update("clientes", "cedula = '',nombre='"+txtnombre.Text+"',addressid='"+txtdireccion.Text+"',telefono='"+txttel.Text+"',celular='"+txtcelular.Text+"',comentario='"+txtcomentario.Text+"'","id="+id))
+                    {
+                        MessageBox.Show("Cliente Actualizado");
+
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido registrar el cliente.");
+                    }
                 }
             }
             else
             {
                 MessageBox.Show("Cedula y nombre son obligatorios");
             }
+        }
+
+        private void boton3_Click(object sender, EventArgs e)
+        {
+            selector gg = new selector("direcciones");
+            gg.ShowDialog();
+            txtdireccion.Text = gg.row.Cells[0].Value.ToString();
         }
     }
 }
