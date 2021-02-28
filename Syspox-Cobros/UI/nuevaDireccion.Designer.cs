@@ -40,13 +40,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtsector = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtmunicipio = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtmonto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtcomentarios = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.boton3 = new Syspox_Cobros.controls.boton();
+            this.boton4 = new Syspox_Cobros.controls.boton();
+            this.txtmunicipio = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -196,16 +198,6 @@
             this.label5.TabIndex = 61;
             this.label5.Text = "SECTOR";
             // 
-            // txtmunicipio
-            // 
-            this.txtmunicipio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtmunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmunicipio.ForeColor = System.Drawing.Color.Green;
-            this.txtmunicipio.Location = new System.Drawing.Point(614, 274);
-            this.txtmunicipio.Name = "txtmunicipio";
-            this.txtmunicipio.Size = new System.Drawing.Size(188, 30);
-            this.txtmunicipio.TabIndex = 64;
-            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -274,16 +266,65 @@
             this.pictureBox2.TabIndex = 52;
             this.pictureBox2.TabStop = false;
             // 
+            // boton3
+            // 
+            this.boton3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.boton3.BackColor = System.Drawing.Color.Green;
+            this.boton3.FlatAppearance.BorderSize = 0;
+            this.boton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boton3.ForeColor = System.Drawing.Color.White;
+            this.boton3.Location = new System.Drawing.Point(761, 580);
+            this.boton3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton3.Name = "boton3";
+            this.boton3.Size = new System.Drawing.Size(172, 51);
+            this.boton3.TabIndex = 69;
+            this.boton3.Text = "ELIMINAR";
+            this.boton3.texto = "ELIMINAR";
+            this.boton3.UseVisualStyleBackColor = false;
+            this.boton3.Visible = false;
+            // 
+            // boton4
+            // 
+            this.boton4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.boton4.BackColor = System.Drawing.Color.Green;
+            this.boton4.FlatAppearance.BorderSize = 0;
+            this.boton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.boton4.ForeColor = System.Drawing.Color.White;
+            this.boton4.Location = new System.Drawing.Point(845, 307);
+            this.boton4.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton4.Name = "boton4";
+            this.boton4.Size = new System.Drawing.Size(139, 30);
+            this.boton4.TabIndex = 71;
+            this.boton4.Text = "SELECCIONAR";
+            this.boton4.texto = "SELECCIONAR";
+            this.boton4.UseVisualStyleBackColor = false;
+            this.boton4.Click += new System.EventHandler(this.boton4_Click);
+            // 
+            // txtmunicipio
+            // 
+            this.txtmunicipio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtmunicipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmunicipio.ForeColor = System.Drawing.Color.Green;
+            this.txtmunicipio.Location = new System.Drawing.Point(536, 307);
+            this.txtmunicipio.Name = "txtmunicipio";
+            this.txtmunicipio.ReadOnly = true;
+            this.txtmunicipio.Size = new System.Drawing.Size(300, 30);
+            this.txtmunicipio.TabIndex = 72;
+            // 
             // nuevaDireccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 654);
+            this.Controls.Add(this.txtmunicipio);
+            this.Controls.Add(this.boton4);
+            this.Controls.Add(this.boton3);
             this.Controls.Add(this.txtcomentarios);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtmonto);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtmunicipio);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtsector);
             this.Controls.Add(this.label5);
@@ -316,11 +357,13 @@
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txtsector, 0);
             this.Controls.SetChildIndex(this.label6, 0);
-            this.Controls.SetChildIndex(this.txtmunicipio, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.txtmonto, 0);
             this.Controls.SetChildIndex(this.label8, 0);
             this.Controls.SetChildIndex(this.txtcomentarios, 0);
+            this.Controls.SetChildIndex(this.boton3, 0);
+            this.Controls.SetChildIndex(this.boton4, 0);
+            this.Controls.SetChildIndex(this.txtmunicipio, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -342,11 +385,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtsector;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtmunicipio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtmonto;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtcomentarios;
         private System.Windows.Forms.Label label8;
+        private controls.boton boton3;
+        private controls.boton boton4;
+        private System.Windows.Forms.TextBox txtmunicipio;
     }
 }

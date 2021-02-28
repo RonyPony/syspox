@@ -255,6 +255,7 @@
             this.boton4.Text = "MODIFICAR";
             this.boton4.texto = "MODIFICAR";
             this.boton4.UseVisualStyleBackColor = false;
+            this.boton4.Click += new System.EventHandler(this.boton4_Click);
             // 
             // dataGridView1
             // 

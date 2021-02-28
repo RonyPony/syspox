@@ -59,15 +59,19 @@ namespace Syspox_Cobros
             {
                 abrir();
                 DataTable dt = new DataTable();
-                string consulta = "select nombre from direcciones where id="+id;
+                string consulta = "select nombre,calle,numero,manzana,sector,municipio,monto,comentarios from direcciones where id="+id;
                 SqlCommand comando = new SqlCommand(consulta, ver());
                 SqlDataAdapter adaptador = new SqlDataAdapter(comando);
                 DataTable dl = new DataTable();
                 adaptador.Fill(dl);
                 if (dl.Rows.Count == 1)
                 {
-                    string tipo = dl.Rows[0][0].ToString().ToUpper();
-                    return tipo;
+                    string nombre = dl.Rows[0][0].ToString().ToUpper();
+                    string calle = dl.Rows[0][1].ToString().ToUpper();
+                    string numero = dl.Rows[0][2].ToString().ToUpper();
+                    string sector = dl.Rows[0][4].ToString().ToUpper();
+                    string municipio = dl.Rows[0][5].ToString().ToUpper();
+                    return nombre+" - "+calle+" numero "+numero+", "+sector+". "+municipio;
                 }
                 else
                 {

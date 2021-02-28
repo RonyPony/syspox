@@ -33,5 +33,11 @@ namespace Syspox_Cobros.UI
         {
             this.Close();
         }
+
+        private void boton4_Click(object sender, EventArgs e)
+        {
+            nuevaDireccion p = new nuevaDireccion(Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value));
+            p.Show();
+        }
     }
 }

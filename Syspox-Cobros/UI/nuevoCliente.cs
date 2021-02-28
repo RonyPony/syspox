@@ -90,5 +90,10 @@ namespace Syspox_Cobros.UI
             gg.ShowDialog();
             txtdireccion.Text = gg.row.Cells[0].Value.ToString();
         }
+
+        private void txtdireccion_TextChanged(object sender, EventArgs e)
+        {
+            lbldireccion.Text = data.getAdress(txtdireccion.Text);
+        }
     }
 }
