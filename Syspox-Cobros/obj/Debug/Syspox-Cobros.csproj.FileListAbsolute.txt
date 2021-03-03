@@ -29,7 +29,6 @@ D:\personal projects\syspox-cobros\Syspox-Cobros\bin\Debug\Syspox-Cobros.exe.man
 D:\personal projects\syspox-cobros\Syspox-Cobros\bin\Debug\Syspox-Cobros.application
 D:\personal projects\syspox-cobros\Syspox-Cobros\bin\Debug\Syspox-Cobros.exe
 D:\personal projects\syspox-cobros\Syspox-Cobros\bin\Debug\Syspox-Cobros.pdb
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.csprojAssemblyReference.cache
 D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.controls.boton.resources
 D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.Properties.Resources.resources
 D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.BASEFORM.resources

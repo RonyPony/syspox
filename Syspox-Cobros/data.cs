@@ -26,7 +26,7 @@ namespace Syspox_Cobros
                 }
                 abrir();
                 DataTable dt = new DataTable();
-                string consulta = "select "+campo+" from "+table+" where "+conditionals+";";
+                string consulta = "select top (1)"+campo+" from "+table+" where "+conditionals+";";
                 SqlCommand comando = new SqlCommand(consulta, ver());
                 SqlDataAdapter adaptador = new SqlDataAdapter(comando);
                 DataTable dl = new DataTable();
@@ -842,6 +842,31 @@ namespace Syspox_Cobros
             }
         }
 
+
+        public DataTable getTableCustomQuery(string query)
+        {
+            try
+            {
+
+                abrir();
+                string mSQL = query;
+                SqlCommand cmd = new SqlCommand(mSQL, ver());
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            catch (SqlException fbex)
+            {
+                //throw fbex;
+                showError(fbex);
+                return null;
+            }
+            finally
+            {
+                cerrar();
+            }
+        }
 
         public DataTable getTable(string table, string conditionals)
         {

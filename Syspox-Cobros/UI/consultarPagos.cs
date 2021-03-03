@@ -28,5 +28,48 @@ namespace Syspox_Cobros.UI
         {
             this.Close();
         }
+
+        private void boton2_Click(object sender, EventArgs e)
+        {
+            buscar();
+        }
+
+        private void buscar()
+        {
+            string whereclause = "1=1";
+
+            if (txtcedula.Text != string.Empty)
+            {
+                whereclause += " and c.cedula= '" + txtcedula.Text+"'";
+            }
+            if (txtnombre.Text != string.Empty)
+            {
+                whereclause += " and c.nombre like '%" + txtnombre.Text + "%'";
+            }
+            if (txtdireccion.Text != string.Empty)
+            {
+                whereclause += " and c.addressId=" + txtdireccion.Text;
+            }
+            if (txtmes.Text != string.Empty)
+            {
+                whereclause += " and p.mes=" + txtmes.Text;
+            }
+            data data2 = new data();
+            dataGridView1.DataSource = data2.getTableCustomQuery("SELECT c.nombre as NOMBRE,c.cedula as CEDULA,'CALLE '+upper(d.calle)+', NUMERO '+d.numero+'. '+upper(d.sector)+', '+upper(d.municipio) as DIRECCION,d.monto as TARIFA, c.telefono as TELEFONO,c.celular as CELULAR  FROM pagos as p inner join clientes as c on c.id = p.idCliente inner join direcciones d on d.id=c.addressId where " + whereclause);
+        }
+
+        private void boton4_Click(object sender, EventArgs e)
+        {
+            selector select = new selector("clientes");
+            select.ShowDialog();
+            txtcedula.Text = select.row.Cells[1].Value.ToString();
+        }
+
+        private void boton3_Click(object sender, EventArgs e)
+        {
+            selector select = new selector("direcciones");
+            select.ShowDialog();
+            txtdireccion.Text = select.row.Cells[0].Value.ToString();
+        }
     }
 }

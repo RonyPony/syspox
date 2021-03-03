@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtdireccion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,6 +41,7 @@
             this.boton3 = new Syspox_Cobros.controls.boton();
             this.boton4 = new Syspox_Cobros.controls.boton();
             this.lbldireccion = new System.Windows.Forms.Label();
+            this.boton5 = new Syspox_Cobros.controls.boton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,14 +54,14 @@
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(12, 245);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -221,11 +222,30 @@
             this.lbldireccion.TabIndex = 42;
             this.lbldireccion.Text = "-------------";
             // 
+            // boton5
+            // 
+            this.boton5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.boton5.BackColor = System.Drawing.Color.Green;
+            this.boton5.FlatAppearance.BorderSize = 0;
+            this.boton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.boton5.ForeColor = System.Drawing.Color.White;
+            this.boton5.Location = new System.Drawing.Point(422, 74);
+            this.boton5.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton5.Name = "boton5";
+            this.boton5.Size = new System.Drawing.Size(139, 30);
+            this.boton5.TabIndex = 43;
+            this.boton5.Text = "SELECCIONAR";
+            this.boton5.texto = "SELECCIONAR";
+            this.boton5.UseVisualStyleBackColor = false;
+            this.boton5.Click += new System.EventHandler(this.boton5_Click);
+            // 
             // consultarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 721);
+            this.Controls.Add(this.boton5);
             this.Controls.Add(this.lbldireccion);
             this.Controls.Add(this.boton4);
             this.Controls.Add(this.boton3);
@@ -254,6 +274,7 @@
             this.Controls.SetChildIndex(this.boton3, 0);
             this.Controls.SetChildIndex(this.boton4, 0);
             this.Controls.SetChildIndex(this.lbldireccion, 0);
+            this.Controls.SetChildIndex(this.boton5, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -274,5 +295,6 @@
         private controls.boton boton3;
         private controls.boton boton4;
         private System.Windows.Forms.Label lbldireccion;
+        private controls.boton boton5;
     }
 }

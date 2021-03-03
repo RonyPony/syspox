@@ -90,5 +90,12 @@ namespace Syspox_Cobros.UI
             data data2 = new data();
             dataGridView1.DataSource = data2.getTable("clientes","cedula like '%" + txtcedula.Text + "%' and nombre like '%"+txtnombre.Text+"%' "+direccion);
         }
+
+        private void boton5_Click(object sender, EventArgs e)
+        {
+            selector select = new selector("clientes");
+            select.ShowDialog();
+            txtcedula.Text = select.row.Cells[1].Value.ToString();
+        }
     }
 }

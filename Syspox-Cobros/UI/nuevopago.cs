@@ -31,6 +31,7 @@ namespace Syspox_Cobros.UI
             txtmes.Text = "";
         }
 
+
         private void boton1_Click(object sender, EventArgs e)
         {
 
@@ -93,11 +94,23 @@ namespace Syspox_Cobros.UI
             {
                 txtnombre.Text = info[2];
                 txtdireccion.Text = info[3];
+                getLastPayment();
                 lblmonto.Text = "Restante RD$:"+data.getAdressMonto(txtdireccion.Text);
                 pagoEsperado = Convert.ToInt32(data.getAdressMonto(txtdireccion.Text));
                 lbldireccion.Text = data.getAdress(txtdireccion.Text);
             }
             
+        }
+
+        private void getLastPayment()
+        {
+            string mes, monto,id;
+            id = data.getCustomerId(txtcedula.Text);
+            mes = data.getSingleField("mes","pagos","idCliente="+id+ " order by fecha desc");
+            monto = data.getSingleField("monto","pagos","idCliente="+id+ " order by fecha desc");
+            txtultimomonto.Text = "Ultimo pago recibido fue del mes de "+mes+" por un monto de "+monto;
+            txtmes.Text = mes;
+            txtmes.DroppedDown = true;
         }
 
         private void txtmonto_TextChanged(object sender, EventArgs e)
