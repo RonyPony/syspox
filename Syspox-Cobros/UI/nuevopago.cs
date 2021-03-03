@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +15,8 @@ namespace Syspox_Cobros.UI
     public partial class nuevopago : UI.BASEFORM
     {
         data data = new data();
+        int pagoEsperado;
+        imprimir imprimir = new imprimir();
         public nuevopago()
         {
             InitializeComponent();
@@ -22,9 +26,9 @@ namespace Syspox_Cobros.UI
         {
             this.titulo = "nuevo pago";
             DataTable table = data.getTable("meses", string.Empty);
-            comboBox1.DataSource = table;
-            comboBox1.DisplayMember = "name";
-            comboBox1.Text = "";
+            txtmes.DataSource = table;
+            txtmes.DisplayMember = "name";
+            txtmes.Text = "";
         }
 
         private void boton1_Click(object sender, EventArgs e)
@@ -35,6 +39,74 @@ namespace Syspox_Cobros.UI
         private void boton2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void boton3_Click(object sender, EventArgs e)
+        {
+            selector select = new selector("direcciones");
+
+        }
+
+        private void txtdireccion_TextChanged(object sender, EventArgs e)
+        {
+            lbldireccion.Text = data.getAdress(txtdireccion.Text);
+        }
+
+        private void boton1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                string id, mes, monto, fecha, valores;
+                id = "'" + data.getCustomerId(txtcedula.Text) + "'";
+                mes = "'" + txtmes.Text + "'";
+                monto = "'" + txtmonto.Text + "'";
+                fecha = "'" + txtfecha.Value.ToString() + "'";
+                valores = id + "," + mes + "," + monto + "," + fecha;
+                if (data.save("pagos", "idCliente,mes,monto,fecha", valores))
+                {
+                    MessageBox.Show("Pago hecho con exito");
+                    imprimir.printPayment(txtcedula.Text,txtmonto.Text);
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
+        private void txtcedula_TextChanged(object sender, EventArgs e)
+        {
+            getInfo();
+        }
+
+        private void getInfo()
+        {
+            List<string> info = data.getClienteInfo(data.getCustomerId(txtcedula.Text));
+            if (info.Count <= 0)
+            {
+
+            }
+            else
+            {
+                txtnombre.Text = info[2];
+                txtdireccion.Text = info[3];
+                lblmonto.Text = "Restante RD$:"+data.getAdressMonto(txtdireccion.Text);
+                pagoEsperado = Convert.ToInt32(data.getAdressMonto(txtdireccion.Text));
+                lbldireccion.Text = data.getAdress(txtdireccion.Text);
+            }
+            
+        }
+
+        private void txtmonto_TextChanged(object sender, EventArgs e)
+        {
+            if (txtmonto.Text!=string.Empty)
+            {
+                lblmonto.Text = "Restante RD$:" + (pagoEsperado - Convert.ToInt32(txtmonto.Text)).ToString();
+            }
+            
         }
     }
 }

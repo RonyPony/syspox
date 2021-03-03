@@ -53,6 +53,73 @@ namespace Syspox_Cobros
             }
         }
 
+        internal string getCustomerId(string cedula)
+        {
+            try
+            {
+                abrir();
+                DataTable dt = new DataTable();
+                string consulta = "select id from clientes where cedula= '" + cedula+"'";
+                SqlCommand comando = new SqlCommand(consulta, ver());
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable dl = new DataTable();
+                adaptador.Fill(dl);
+                if (dl.Rows.Count == 1)
+                {
+                    string nombre = dl.Rows[0][0].ToString().ToUpper();
+                   
+                    return nombre;
+                }
+                else
+                {
+                    return null;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                cerrar();
+            }
+        }
+
+        internal string getAdressMonto(string id)
+        {
+            try
+            {
+                abrir();
+                DataTable dt = new DataTable();
+                string consulta = "select monto from direcciones where id=" + id;
+                SqlCommand comando = new SqlCommand(consulta, ver());
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable dl = new DataTable();
+                adaptador.Fill(dl);
+                if (dl.Rows.Count == 1)
+                {
+                    string nombre = dl.Rows[0][0].ToString().ToUpper();
+                    return nombre;
+                }
+                else
+                {
+                    return null;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                cerrar();
+            }
+        }
+
         internal string getAdress(string id)
         {
             try
@@ -219,8 +286,57 @@ namespace Syspox_Cobros
                 cerrar();
             }
         }
+        public List<string> getClienteInfo(string id)
+        {
+            if (id==null)
+            {
+                return new List<string>();
+            }
+            try
+            {
+                abrir();
+                DataTable dt = new DataTable();
+                string consulta = "select * from clientes where id = '" + id + "';";
+                SqlCommand comando = new SqlCommand(consulta, ver());
+                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                DataTable dl = new DataTable();
+                adaptador.Fill(dl);
+                if (dl.Rows.Count == 1)
+                {
+                    List<string> datax = new List<string>();
+                    string idd = dl.Rows[0][0].ToString().ToUpper();
+                    string cedula = dl.Rows[0][1].ToString().ToUpper();
+                    string nombre = dl.Rows[0][2].ToString().ToUpper();
+                    string addressid = dl.Rows[0][3].ToString().ToUpper();
+                    string telefono = dl.Rows[0][3].ToString().ToUpper();
+                    string celular = dl.Rows[0][3].ToString().ToUpper();
+                    string comentario = dl.Rows[0][3].ToString().ToUpper();
+                    datax.Add(idd);
+                    datax.Add(cedula);
+                    datax.Add(nombre);
+                    datax.Add(addressid);
+                    datax.Add(telefono);
+                    datax.Add(celular);
+                    datax.Add(comentario);
+                    return datax;
+                }
+                else
+                {
+                    return null;
+                }
 
-        public string getCliente(string id)
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                cerrar();
+            }
+        }
+        public string getClienteNombre(string id)
         {
             try
             {
@@ -700,6 +816,31 @@ namespace Syspox_Cobros
 
         }
 
+        public DataTable getTableSP(string sp)
+        {
+            try
+            {
+                DataTable table = new DataTable();
+                using (var con = ver())
+                using (var cmd = new SqlCommand(sp, con))
+                using (var da = new SqlDataAdapter(cmd))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    da.Fill(table);
+                }
+                return table;
+            }
+            catch (SqlException fbex)
+            {
+                //throw fbex;
+                showError(fbex);
+                return null;
+            }
+            finally
+            {
+                cerrar();
+            }
+        }
 
 
         public DataTable getTable(string table, string conditionals)

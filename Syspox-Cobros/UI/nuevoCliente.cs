@@ -66,7 +66,7 @@ namespace Syspox_Cobros.UI
                 else
                 {
                     data data = new data();
-                    if (data.update("clientes", "cedula = '',nombre='"+txtnombre.Text+"',addressid='"+txtdireccion.Text+"',telefono='"+txttel.Text+"',celular='"+txtcelular.Text+"',comentario='"+txtcomentario.Text+"'","id="+id))
+                    if (data.update("clientes", "cedula = '"+txtcedula.Text+"',nombre='"+txtnombre.Text+"',addressid='"+txtdireccion.Text+"',telefono='"+txttel.Text+"',celular='"+txtcelular.Text+"',comentario='"+txtcomentario.Text+"'","id="+id))
                     {
                         MessageBox.Show("Cliente Actualizado");
 

@@ -12,6 +12,7 @@ namespace Syspox_Cobros.UI
 {
     public partial class consultarPagos : UI.BASEFORM
     {
+        data data = new data();
         public consultarPagos()
         {
             InitializeComponent();
@@ -20,6 +21,7 @@ namespace Syspox_Cobros.UI
         private void consultarPagos_Load(object sender, EventArgs e)
         {
             this.titulo = "CONSULTAR PAGOS";
+            dataGridView1.DataSource = data.getTableSP("SP_getPAgos");
         }
 
         private void boton1_Click(object sender, EventArgs e)

@@ -85,6 +85,7 @@
       <DependentUpon>boton.cs</DependentUpon>
     </Compile>
     <Compile Include="data.cs" />
+    <Compile Include="imprimir.cs" />
     <Compile Include="UI\BASEFORM.cs">
       <SubType>Form</SubType>
     </Compile>
