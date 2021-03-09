@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Syspox-Cobros.exe" size="135136">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Syspox-Cobros.exe" size="128992">
       <assemblyIdentity name="Syspox-Cobros" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Tnp+CNQgzw0xTA8EjgQuv60HkQucnn/w9/varLZ+EUQ=</dsig:DigestValue>
+        <dsig:DigestValue>DhVlfor8x9UxWYhspru59eS5x4TRztN/4Pg1H4BJiyk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

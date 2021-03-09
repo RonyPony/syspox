@@ -115,11 +115,26 @@ namespace Syspox_Cobros.UI
 
         private void txtmonto_TextChanged(object sender, EventArgs e)
         {
-            if (txtmonto.Text!=string.Empty)
+            try
             {
-                lblmonto.Text = "Restante RD$:" + (pagoEsperado - Convert.ToInt32(txtmonto.Text)).ToString();
+                if (txtmonto.Text != string.Empty)
+                {
+                    lblmonto.Text = "Restante RD$:" + (pagoEsperado - Convert.ToInt32(txtmonto.Text)).ToString();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
             
+        }
+
+        private void boton10_Click(object sender, EventArgs e)
+        {
+            selector select = new selector("clientes");
+            select.ShowDialog();
+            txtcedula.Text = select.row.Cells[1].Value.ToString();
         }
     }
 }

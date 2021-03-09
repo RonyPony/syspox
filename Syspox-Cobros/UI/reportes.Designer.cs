@@ -30,13 +30,13 @@
         {
             this.boton1 = new Syspox_Cobros.controls.boton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.boton10 = new Syspox_Cobros.controls.boton();
             this.boton2 = new Syspox_Cobros.controls.boton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtpagoscedula = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.boton3 = new Syspox_Cobros.controls.boton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.boton4 = new Syspox_Cobros.controls.boton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -51,6 +51,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.boton9 = new Syspox_Cobros.controls.boton();
+            this.txtmes = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -73,12 +74,14 @@
             this.boton1.Text = "IMPRIMIR TODOS LOS PAGOS";
             this.boton1.texto = "IMPRIMIR TODOS LOS PAGOS";
             this.boton1.UseVisualStyleBackColor = false;
+            this.boton1.Click += new System.EventHandler(this.boton1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.boton10);
             this.groupBox1.Controls.Add(this.boton2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtpagoscedula);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(13, 140);
@@ -87,6 +90,24 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PAGOS DE UN CLIENTE";
+            // 
+            // boton10
+            // 
+            this.boton10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.boton10.BackColor = System.Drawing.Color.Green;
+            this.boton10.FlatAppearance.BorderSize = 0;
+            this.boton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.boton10.ForeColor = System.Drawing.Color.White;
+            this.boton10.Location = new System.Drawing.Point(354, 33);
+            this.boton10.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton10.Name = "boton10";
+            this.boton10.Size = new System.Drawing.Size(139, 30);
+            this.boton10.TabIndex = 42;
+            this.boton10.Text = "SELECCIONAR";
+            this.boton10.texto = "SELECCIONAR";
+            this.boton10.UseVisualStyleBackColor = false;
+            this.boton10.Click += new System.EventHandler(this.boton10_Click);
             // 
             // boton2
             // 
@@ -103,15 +124,17 @@
             this.boton2.Text = "IMPRIMIR PAGO DE UN CLIENTE";
             this.boton2.texto = "IMPRIMIR PAGO DE UN CLIENTE";
             this.boton2.UseVisualStyleBackColor = false;
+            this.boton2.Click += new System.EventHandler(this.boton2_Click);
             // 
-            // textBox1
+            // txtpagoscedula
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Green;
-            this.textBox1.Location = new System.Drawing.Point(174, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(289, 30);
-            this.textBox1.TabIndex = 18;
+            this.txtpagoscedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpagoscedula.ForeColor = System.Drawing.Color.Green;
+            this.txtpagoscedula.Location = new System.Drawing.Point(174, 34);
+            this.txtpagoscedula.Name = "txtpagoscedula";
+            this.txtpagoscedula.Size = new System.Drawing.Size(166, 30);
+            this.txtpagoscedula.TabIndex = 18;
+            this.txtpagoscedula.TextChanged += new System.EventHandler(this.txtpagoscedula_TextChanged);
             // 
             // label3
             // 
@@ -140,12 +163,13 @@
             this.boton3.Text = "IMPRIMIR TODOS LOS CLIENTES";
             this.boton3.texto = "IMPRIMIR TODOS LOS CLIENTES";
             this.boton3.UseVisualStyleBackColor = false;
+            this.boton3.Click += new System.EventHandler(this.boton3_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.Controls.Add(this.txtmes);
             this.groupBox2.Controls.Add(this.boton4);
-            this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(549, 57);
             this.groupBox2.Name = "groupBox2";
@@ -169,15 +193,7 @@
             this.boton4.Text = "IMPRIMIR PAGOS DE UN MES";
             this.boton4.texto = "IMPRIMIR PAGOS DE UN MES";
             this.boton4.UseVisualStyleBackColor = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Green;
-            this.textBox2.Location = new System.Drawing.Point(174, 34);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(289, 30);
-            this.textBox2.TabIndex = 18;
+            this.boton4.Click += new System.EventHandler(this.boton4_Click);
             // 
             // label1
             // 
@@ -363,6 +379,17 @@
             this.boton9.texto = "IMPRIMIR PAGOS ESPECIFICOS";
             this.boton9.UseVisualStyleBackColor = false;
             // 
+            // txtmes
+            // 
+            this.txtmes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtmes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtmes.ForeColor = System.Drawing.Color.Green;
+            this.txtmes.FormattingEnabled = true;
+            this.txtmes.Location = new System.Drawing.Point(151, 30);
+            this.txtmes.Name = "txtmes";
+            this.txtmes.Size = new System.Drawing.Size(194, 33);
+            this.txtmes.TabIndex = 19;
+            // 
             // reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -393,7 +420,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -407,12 +433,11 @@
         private controls.boton boton1;
         private System.Windows.Forms.GroupBox groupBox1;
         private controls.boton boton2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtpagoscedula;
         private System.Windows.Forms.Label label3;
         private controls.boton boton3;
         private System.Windows.Forms.GroupBox groupBox2;
         private controls.boton boton4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox textBox4;
@@ -427,5 +452,7 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
         private controls.boton boton9;
+        private controls.boton boton10;
+        private System.Windows.Forms.ComboBox txtmes;
     }
 }

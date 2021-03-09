@@ -12,14 +12,16 @@ namespace Syspox_Cobros.UI
 {
     public partial class mainMenu : UI.BASEFORM
     {
-        public mainMenu()
+        public mainMenu(string user)
         {
             InitializeComponent();
+            txtuser.Text = user;
         }
 
         private void mainMenu_Load(object sender, EventArgs e)
         {
             this.titulo = "menu principal";
+            timer1.Start();
         }
 
         private void boton1_Load(object sender, EventArgs e)
@@ -237,8 +239,19 @@ namespace Syspox_Cobros.UI
 
         private void boton2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
+        }
 
+        private void boton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LOGIN p = new LOGIN();
+            p.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txttime.Text = DateTime.Now.ToString();
         }
     }
 }

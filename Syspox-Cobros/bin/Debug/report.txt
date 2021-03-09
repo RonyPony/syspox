@@ -1,0 +1,560 @@
+CEDULA: 00119260073
+
+NOMBRE: jhoniel garcia
+
+MES: febrero   
+
+FECHA: 3/2/2021 5:28:43 PM
+
+MONTO PAGADO: 8000
+
+TARIFA: 8500
+
+DIFERENCIA: 500
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: enero     
+
+FECHA: 2/28/2021 9:30:35 PM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: enero     
+
+FECHA: 2/28/2021 9:30:35 PM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: abril     
+
+FECHA: 3/2/2021 12:17:45 PM
+
+MONTO PAGADO: 1000
+
+TARIFA: 12000
+
+DIFERENCIA: 11000
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: enero     
+
+FECHA: 3/2/2021 12:19:58 PM
+
+MONTO PAGADO: 800
+
+TARIFA: 12000
+
+DIFERENCIA: 11200
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: abril     
+
+FECHA: 3/2/2021 5:44:18 PM
+
+MONTO PAGADO: 10000
+
+TARIFA: 12000
+
+DIFERENCIA: 2000
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: diciembre 
+
+FECHA: 3/3/2021 9:11:52 AM
+
+MONTO PAGADO: 2000
+
+TARIFA: 12000
+
+DIFERENCIA: 10000
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: diciembre 
+
+FECHA: 3/3/2021 9:13:58 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: diciembre 
+
+FECHA: 3/3/2021 9:14:46 AM
+
+MONTO PAGADO: 500
+
+TARIFA: 12000
+
+DIFERENCIA: 11500
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: diciembre 
+
+FECHA: 3/3/2021 9:16:01 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: diciembre 
+
+FECHA: 3/3/2021 9:16:48 AM
+
+MONTO PAGADO: 500
+
+TARIFA: 12000
+
+DIFERENCIA: 11500
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: diciembre 
+
+FECHA: 3/3/2021 9:18:20 AM
+
+MONTO PAGADO: 6
+
+TARIFA: 12000
+
+DIFERENCIA: 11994
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: octubre   
+
+FECHA: 3/3/2021 9:31:45 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: octubre   
+
+FECHA: 3/3/2021 9:32:36 AM
+
+MONTO PAGADO: 5000
+
+TARIFA: 12000
+
+DIFERENCIA: 7000
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: octubre   
+
+FECHA: 3/3/2021 9:34:01 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: octubre   
+
+FECHA: 3/3/2021 9:34:56 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: diciembre 
+
+FECHA: 3/2/2021 8:53:33 PM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: junio     
+
+FECHA: 3/2/2021 9:06:46 PM
+
+MONTO PAGADO: 200
+
+TARIFA: 12000
+
+DIFERENCIA: 11800
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: mayo      
+
+FECHA: 3/2/2021 9:07:17 PM
+
+MONTO PAGADO: 760
+
+TARIFA: 12000
+
+DIFERENCIA: 11240
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: diciembre 
+
+FECHA: 3/3/2021 9:10:14 AM
+
+MONTO PAGADO: 2
+
+TARIFA: 12000
+
+DIFERENCIA: 11998
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: diciembre 
+
+FECHA: 3/3/2021 9:19:24 AM
+
+MONTO PAGADO: 5000
+
+TARIFA: 12000
+
+DIFERENCIA: 7000
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: octubre   
+
+FECHA: 3/3/2021 9:40:14 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: octubre   
+
+FECHA: 3/3/2021 9:46:05 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: octubre   
+
+FECHA: 3/3/2021 9:49:15 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: octubre   
+
+FECHA: 3/3/2021 9:50:15 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: septiembre
+
+FECHA: 3/3/2021 8:56:13 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: diciembre 
+
+FECHA: 3/3/2021 9:21:52 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: diciembre 
+
+FECHA: 3/3/2021 9:23:06 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: octubre   
+
+FECHA: 3/3/2021 9:23:57 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: octubre   
+
+FECHA: 3/3/2021 9:25:20 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: octubre   
+
+FECHA: 3/3/2021 9:25:20 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: octubre   
+
+FECHA: 3/3/2021 9:44:18 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: octubre   
+
+FECHA: 3/3/2021 9:44:57 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: julio     
+
+FECHA: 3/3/2021 9:07:05 AM
+
+MONTO PAGADO: 12000
+
+TARIFA: 12000
+
+DIFERENCIA: 0
+
+------------------------------------------
+
+CEDULA: 40227599079
+
+NOMBRE: RONEL CRUZ
+
+MES: diciembre 
+
+FECHA: 3/3/2021 9:08:36 AM
+
+MONTO PAGADO: 10000
+
+TARIFA: 12000
+
+DIFERENCIA: 2000
+
+------------------------------------------
+

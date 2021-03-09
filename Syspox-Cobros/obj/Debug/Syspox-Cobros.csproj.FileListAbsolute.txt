@@ -50,3 +50,4 @@ D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.exe.man
 D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.application
 D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.exe
 D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.pdb
+D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.csprojAssemblyReference.cache

@@ -35,6 +35,8 @@
             this.boton1 = new Syspox_Cobros.controls.boton();
             this.boton2 = new Syspox_Cobros.controls.boton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +46,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(347, 153);
+            this.label3.Location = new System.Drawing.Point(481, 269);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 25);
             this.label3.TabIndex = 1;
@@ -56,7 +58,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(347, 199);
+            this.label4.Location = new System.Drawing.Point(481, 315);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 25);
             this.label4.TabIndex = 2;
@@ -67,7 +69,7 @@
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Green;
-            this.textBox1.Location = new System.Drawing.Point(487, 150);
+            this.textBox1.Location = new System.Drawing.Point(621, 266);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(238, 30);
             this.textBox1.TabIndex = 3;
@@ -77,11 +79,13 @@
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Green;
-            this.textBox2.Location = new System.Drawing.Point(487, 196);
+            this.textBox2.Location = new System.Drawing.Point(621, 312);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '▬';
             this.textBox2.Size = new System.Drawing.Size(238, 30);
             this.textBox2.TabIndex = 4;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
             // 
             // boton1
             // 
@@ -90,7 +94,7 @@
             this.boton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boton1.ForeColor = System.Drawing.Color.White;
-            this.boton1.Location = new System.Drawing.Point(377, 272);
+            this.boton1.Location = new System.Drawing.Point(511, 388);
             this.boton1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.boton1.Name = "boton1";
             this.boton1.Size = new System.Drawing.Size(158, 50);
@@ -108,7 +112,7 @@
             this.boton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boton2.ForeColor = System.Drawing.Color.White;
-            this.boton2.Location = new System.Drawing.Point(547, 272);
+            this.boton2.Location = new System.Drawing.Point(681, 388);
             this.boton2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.boton2.Name = "boton2";
             this.boton2.Size = new System.Drawing.Size(133, 51);
@@ -123,18 +127,46 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::Syspox_Cobros.Properties.Resources.Group_19;
-            this.pictureBox2.Location = new System.Drawing.Point(32, 131);
+            this.pictureBox2.Location = new System.Drawing.Point(166, 247);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(266, 191);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("PMingLiU-ExtB", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(208, 100);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(682, 80);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "SYSPOX SYSTEMS";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(0, 614);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(144, 25);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "VERSION 0.1";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // LOGIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 406);
+            this.ClientSize = new System.Drawing.Size(1068, 639);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.boton2);
             this.Controls.Add(this.boton1);
@@ -153,6 +185,8 @@
             this.Controls.SetChildIndex(this.boton1, 0);
             this.Controls.SetChildIndex(this.boton2, 0);
             this.Controls.SetChildIndex(this.pictureBox2, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,5 +202,7 @@
         private controls.boton boton1;
         private controls.boton boton2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

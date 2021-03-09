@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.boton2 = new Syspox_Cobros.controls.boton();
             this.boton1 = new Syspox_Cobros.controls.boton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtuser = new System.Windows.Forms.Label();
+            this.txttime = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,6 +58,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -81,8 +83,8 @@
             this.panel2.BackColor = System.Drawing.Color.Green;
             this.panel2.Controls.Add(this.boton2);
             this.panel2.Controls.Add(this.boton1);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.txtuser);
+            this.panel2.Controls.Add(this.txttime);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.ForeColor = System.Drawing.Color.White;
@@ -93,6 +95,7 @@
             // 
             // boton2
             // 
+            this.boton2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.boton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.boton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,6 +112,7 @@
             // 
             // boton1
             // 
+            this.boton1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.boton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.boton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -121,24 +125,25 @@
             this.boton1.Text = "CERRAR SESION";
             this.boton1.texto = "CERRAR SESION";
             this.boton1.UseVisualStyleBackColor = false;
+            this.boton1.Click += new System.EventHandler(this.boton1_Click);
             // 
-            // label4
+            // txtuser
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(408, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(229, 24);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "NOMBRE DE USUARIO";
+            this.txtuser.AutoSize = true;
+            this.txtuser.Location = new System.Drawing.Point(4, 10);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(229, 24);
+            this.txtuser.TabIndex = 1;
+            this.txtuser.Text = "NOMBRE DE USUARIO";
             // 
-            // label3
+            // txttime
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(229, 24);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "NOMBRE DE USUARIO";
+            this.txttime.AutoSize = true;
+            this.txttime.Location = new System.Drawing.Point(404, 10);
+            this.txttime.Name = "txttime";
+            this.txttime.Size = new System.Drawing.Size(69, 24);
+            this.txttime.TabIndex = 0;
+            this.txttime.Text = "HORA";
             // 
             // panel3
             // 
@@ -425,6 +430,10 @@
             this.label12.Text = "REPORTES";
             this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // mainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -485,8 +494,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label txtuser;
+        private System.Windows.Forms.Label txttime;
         private controls.boton boton1;
         private controls.boton boton2;
         private System.Windows.Forms.Panel panel3;
@@ -513,5 +522,6 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Timer timer1;
     }
 }

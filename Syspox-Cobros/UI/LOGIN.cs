@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Deployment.Application;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,7 @@ namespace Syspox_Cobros.UI
     public partial class LOGIN : BASEFORM
     {
         data data = new data();
+
         public LOGIN()
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace Syspox_Cobros.UI
         private void LOGIN_Load(object sender, EventArgs e)
         {
             this.titulo = "Login";
+            label6.Text = data.VersionLabel;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,7 +40,7 @@ namespace Syspox_Cobros.UI
         {
             if (data.login(textBox1.Text,textBox2.Text))
             {
-                mainMenu MM = new mainMenu();
+                mainMenu MM = new mainMenu(textBox1.Text);
                 MM.Show();
                 this.Hide();
             }
@@ -70,6 +73,19 @@ namespace Syspox_Cobros.UI
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                boton1.PerformClick();
+            }
         }
     }
 }

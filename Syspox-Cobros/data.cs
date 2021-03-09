@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Reflection;
@@ -15,6 +16,31 @@ namespace Syspox_Cobros
         static string db = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + "\\RIKU.FDB";
         SqlConnection con = new SqlConnection(@"Server="+Syspox_Cobros.Properties.Settings.Default.servername+";Database=syspox;User Id=syspox;Password=syspox1234;");
         public string activeUserId = "No Identificado";
+
+        public string moneyFormat(string amount)
+        {
+            amount = amount.Replace("RD$:", "");
+            decimal moneyvalue = decimal.Parse(amount);
+            string h = moneyvalue.ToString("C", CultureInfo.CreateSpecificCulture("en-US"));
+            return "RD" + h;
+        }
+
+        public string VersionLabel
+        {
+            get
+            {
+                if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed)
+                {
+                    Version ver = System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion;
+                    return string.Format("Product Name: {4}, Version: {0}.{1}.{2}.{3}", ver.Major, ver.Minor, ver.Build, ver.Revision, Assembly.GetEntryAssembly().GetName().Name);
+                }
+                else
+                {
+                    var ver = Assembly.GetExecutingAssembly().GetName().Version;
+                    return string.Format("Product Name: {4}, Version: {0}.{1}.{2}.{3}", ver.Major, ver.Minor, ver.Build, ver.Revision, Assembly.GetEntryAssembly().GetName().Name);
+                }
+            }
+        }
 
         internal string getSingleField(string campo,string table,string conditionals)
         {
@@ -815,14 +841,39 @@ namespace Syspox_Cobros
             }
 
         }
-
-        public DataTable getTableSP(string sp)
+        public DataTable getTableSPwithAttribute(string sp,string atributeName,string atributeValue)
         {
             try
             {
                 DataTable table = new DataTable();
                 using (var con = ver())
                 using (var cmd = new SqlCommand(sp, con))
+                using (var da = new SqlDataAdapter(cmd))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@"+atributeName, SqlDbType.VarChar, 30).Value = atributeValue;
+                    da.Fill(table);
+                }
+                return table;
+            }
+            catch (SqlException fbex)
+            {
+                //throw fbex;
+                showError(fbex);
+                return null;
+            }
+            finally
+            {
+                cerrar();
+            }
+        }
+        public DataTable getTableSP(string sp)
+        {
+            try
+            {
+                DataTable table = new DataTable();
+                using (var con = ver())
+                using (var cmd = new SqlCommand(sp, con))                
                 using (var da = new SqlDataAdapter(cmd))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
