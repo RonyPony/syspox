@@ -28,28 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtsnombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtscedula = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.boton3 = new Syspox_Cobros.controls.boton();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtsdireccion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.boton1 = new Syspox_Cobros.controls.boton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.boton6 = new Syspox_Cobros.controls.boton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.boton7 = new Syspox_Cobros.controls.boton();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtmonto = new System.Windows.Forms.TextBox();
             this.boton2 = new Syspox_Cobros.controls.boton();
             this.boton4 = new Syspox_Cobros.controls.boton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtcedula = new System.Windows.Forms.TextBox();
+            this.txtdireccion = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,14 +61,14 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox2
+            // txtsnombre
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Green;
-            this.textBox2.Location = new System.Drawing.Point(172, 105);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 30);
-            this.textBox2.TabIndex = 28;
+            this.txtsnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsnombre.ForeColor = System.Drawing.Color.Green;
+            this.txtsnombre.Location = new System.Drawing.Point(172, 105);
+            this.txtsnombre.Name = "txtsnombre";
+            this.txtsnombre.Size = new System.Drawing.Size(212, 30);
+            this.txtsnombre.TabIndex = 28;
             // 
             // label4
             // 
@@ -79,14 +81,14 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "NOMBRE";
             // 
-            // textBox1
+            // txtscedula
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Green;
-            this.textBox1.Location = new System.Drawing.Point(172, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 30);
-            this.textBox1.TabIndex = 26;
+            this.txtscedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtscedula.ForeColor = System.Drawing.Color.Green;
+            this.txtscedula.Location = new System.Drawing.Point(172, 60);
+            this.txtscedula.Name = "txtscedula";
+            this.txtscedula.Size = new System.Drawing.Size(158, 30);
+            this.txtscedula.TabIndex = 26;
             // 
             // label3
             // 
@@ -106,7 +108,7 @@
             this.boton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.boton3.ForeColor = System.Drawing.Color.White;
-            this.boton3.Location = new System.Drawing.Point(402, 156);
+            this.boton3.Location = new System.Drawing.Point(393, 159);
             this.boton3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.boton3.Name = "boton3";
             this.boton3.Size = new System.Drawing.Size(139, 30);
@@ -114,15 +116,16 @@
             this.boton3.Text = "SELECCIONAR";
             this.boton3.texto = "SELECCIONAR";
             this.boton3.UseVisualStyleBackColor = false;
+            this.boton3.Click += new System.EventHandler(this.boton3_Click);
             // 
-            // textBox5
+            // txtsdireccion
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Green;
-            this.textBox5.Location = new System.Drawing.Point(196, 156);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(188, 30);
-            this.textBox5.TabIndex = 40;
+            this.txtsdireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtsdireccion.ForeColor = System.Drawing.Color.Green;
+            this.txtsdireccion.Location = new System.Drawing.Point(196, 156);
+            this.txtsdireccion.Name = "txtsdireccion";
+            this.txtsdireccion.Size = new System.Drawing.Size(188, 30);
+            this.txtsdireccion.TabIndex = 40;
             // 
             // label7
             // 
@@ -142,7 +145,7 @@
             this.boton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boton1.ForeColor = System.Drawing.Color.White;
-            this.boton1.Location = new System.Drawing.Point(434, 60);
+            this.boton1.Location = new System.Drawing.Point(454, 99);
             this.boton1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.boton1.Name = "boton1";
             this.boton1.Size = new System.Drawing.Size(141, 51);
@@ -166,13 +169,14 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.boton6);
             this.groupBox1.Controls.Add(this.boton3);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.boton1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtscedula);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtsdireccion);
+            this.groupBox1.Controls.Add(this.txtsnombre);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Location = new System.Drawing.Point(12, 60);
             this.groupBox1.Name = "groupBox1";
@@ -180,26 +184,61 @@
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
             // 
+            // boton6
+            // 
+            this.boton6.BackColor = System.Drawing.Color.Green;
+            this.boton6.FlatAppearance.BorderSize = 0;
+            this.boton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.boton6.ForeColor = System.Drawing.Color.White;
+            this.boton6.Location = new System.Drawing.Point(339, 59);
+            this.boton6.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton6.Name = "boton6";
+            this.boton6.Size = new System.Drawing.Size(138, 30);
+            this.boton6.TabIndex = 43;
+            this.boton6.Text = "SELECCIONAR";
+            this.boton6.texto = "SELECCIONAR";
+            this.boton6.UseVisualStyleBackColor = false;
+            this.boton6.Click += new System.EventHandler(this.boton6_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.Controls.Add(this.boton7);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.textBox8);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.txtmonto);
             this.groupBox2.Controls.Add(this.boton2);
             this.groupBox2.Controls.Add(this.boton4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.txtcedula);
+            this.groupBox2.Controls.Add(this.txtdireccion);
+            this.groupBox2.Controls.Add(this.txtnombre);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(622, 60);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(604, 597);
             this.groupBox2.TabIndex = 45;
             this.groupBox2.TabStop = false;
+            // 
+            // boton7
+            // 
+            this.boton7.BackColor = System.Drawing.Color.Green;
+            this.boton7.FlatAppearance.BorderSize = 0;
+            this.boton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.boton7.ForeColor = System.Drawing.Color.White;
+            this.boton7.Location = new System.Drawing.Point(380, 63);
+            this.boton7.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton7.Name = "boton7";
+            this.boton7.Size = new System.Drawing.Size(138, 30);
+            this.boton7.TabIndex = 47;
+            this.boton7.Text = "SELECCIONAR";
+            this.boton7.texto = "SELECCIONAR";
+            this.boton7.UseVisualStyleBackColor = false;
+            this.boton7.Click += new System.EventHandler(this.boton7_Click);
             // 
             // label9
             // 
@@ -255,14 +294,14 @@
             this.label6.TabIndex = 43;
             this.label6.Text = "MONTO";
             // 
-            // textBox7
+            // txtmonto
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.Green;
-            this.textBox7.Location = new System.Drawing.Point(196, 204);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(188, 30);
-            this.textBox7.TabIndex = 44;
+            this.txtmonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmonto.ForeColor = System.Drawing.Color.Green;
+            this.txtmonto.Location = new System.Drawing.Point(196, 204);
+            this.txtmonto.Name = "txtmonto";
+            this.txtmonto.Size = new System.Drawing.Size(188, 30);
+            this.txtmonto.TabIndex = 44;
             // 
             // boton2
             // 
@@ -279,6 +318,7 @@
             this.boton2.Text = "SELECCIONAR";
             this.boton2.texto = "SELECCIONAR";
             this.boton2.UseVisualStyleBackColor = false;
+            this.boton2.Click += new System.EventHandler(this.boton2_Click);
             // 
             // boton4
             // 
@@ -295,33 +335,34 @@
             this.boton4.Text = "GUARDAR";
             this.boton4.texto = "GUARDAR";
             this.boton4.UseVisualStyleBackColor = false;
+            this.boton4.Click += new System.EventHandler(this.boton4_Click);
             // 
-            // textBox3
+            // txtcedula
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Green;
-            this.textBox3.Location = new System.Drawing.Point(172, 60);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 30);
-            this.textBox3.TabIndex = 26;
+            this.txtcedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcedula.ForeColor = System.Drawing.Color.Green;
+            this.txtcedula.Location = new System.Drawing.Point(172, 60);
+            this.txtcedula.Name = "txtcedula";
+            this.txtcedula.Size = new System.Drawing.Size(188, 30);
+            this.txtcedula.TabIndex = 26;
             // 
-            // textBox4
+            // txtdireccion
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Green;
-            this.textBox4.Location = new System.Drawing.Point(196, 156);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(188, 30);
-            this.textBox4.TabIndex = 40;
+            this.txtdireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtdireccion.ForeColor = System.Drawing.Color.Green;
+            this.txtdireccion.Location = new System.Drawing.Point(196, 156);
+            this.txtdireccion.Name = "txtdireccion";
+            this.txtdireccion.Size = new System.Drawing.Size(188, 30);
+            this.txtdireccion.TabIndex = 40;
             // 
-            // textBox6
+            // txtnombre
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.Green;
-            this.textBox6.Location = new System.Drawing.Point(172, 105);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(188, 30);
-            this.textBox6.TabIndex = 28;
+            this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnombre.ForeColor = System.Drawing.Color.Green;
+            this.txtnombre.Location = new System.Drawing.Point(172, 105);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(188, 30);
+            this.txtnombre.TabIndex = 28;
             // 
             // label5
             // 
@@ -402,12 +443,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtsnombre;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtscedula;
         private System.Windows.Forms.Label label3;
         private controls.boton boton3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtsdireccion;
         private System.Windows.Forms.Label label7;
         private controls.boton boton1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -416,17 +457,19 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtmonto;
         private controls.boton boton2;
         private System.Windows.Forms.Label label1;
         private controls.boton boton4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtcedula;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtdireccion;
+        private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.Label label5;
         private controls.boton boton5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private controls.boton boton6;
+        private controls.boton boton7;
     }
 }

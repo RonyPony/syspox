@@ -129,6 +129,7 @@
             // 
             // txtuser
             // 
+            this.txtuser.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtuser.AutoSize = true;
             this.txtuser.Location = new System.Drawing.Point(4, 10);
             this.txtuser.Name = "txtuser";
@@ -138,6 +139,7 @@
             // 
             // txttime
             // 
+            this.txttime.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txttime.AutoSize = true;
             this.txttime.Location = new System.Drawing.Point(404, 10);
             this.txttime.Name = "txttime";
