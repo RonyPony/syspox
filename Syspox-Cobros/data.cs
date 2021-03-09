@@ -14,7 +14,7 @@ namespace Syspox_Cobros
     class data
     {
         static string db = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + "\\RIKU.FDB";
-        SqlConnection con = new SqlConnection(@"Server="+Syspox_Cobros.Properties.Settings.Default.servername+";Database=syspox;User Id=syspox;Password=syspox1234;");
+        SqlConnection con = new SqlConnection(@"Server="+Syspox_Cobros.Properties.Settings.Default.servername+ ";Database=syspox;Integrated Security=true;");
         public string activeUserId = "No Identificado";
 
         public string moneyFormat(string amount)

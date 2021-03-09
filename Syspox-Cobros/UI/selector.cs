@@ -26,6 +26,7 @@ namespace Syspox_Cobros.UI
 
         private void selector_Load(object sender, EventArgs e)
         {
+            row = new DataGridViewRow();
             this.titulo = "seleccionar un elemento";
             dataGridView1.DataSource = data.getTable(table,string.Empty);
             foreach (DataGridViewColumn col in dataGridView1.Columns)

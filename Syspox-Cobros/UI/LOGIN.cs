@@ -24,6 +24,7 @@ namespace Syspox_Cobros.UI
         {
             this.titulo = "Login";
             label6.Text = data.VersionLabel;
+            TXTSERVER.Text = Syspox_Cobros.Properties.Settings.Default.servername;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,6 +87,23 @@ namespace Syspox_Cobros.UI
             {
                 boton1.PerformClick();
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            srv.Visible = true;
+        }
+
+        private void boton3_Click(object sender, EventArgs e)
+        {
+            Syspox_Cobros.Properties.Settings.Default.servername = TXTSERVER.Text;
+            Syspox_Cobros.Properties.Settings.Default.Save();
+            srv.Visible = false;
         }
     }
 }

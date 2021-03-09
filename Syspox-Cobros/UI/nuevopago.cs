@@ -134,7 +134,11 @@ namespace Syspox_Cobros.UI
         {
             selector select = new selector("clientes");
             select.ShowDialog();
-            txtcedula.Text = select.row.Cells[1].Value.ToString();
+            if (select.row.Cells.Count > 0)
+            {
+                txtcedula.Text = select.row.Cells[1].Value.ToString();
+            }
+            
         }
     }
 }

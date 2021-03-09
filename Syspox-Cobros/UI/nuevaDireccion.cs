@@ -84,14 +84,9 @@ namespace Syspox_Cobros.UI
         {
             selector p = new selector("municipios");
             p.ShowDialog();
-            try
+            if (p.row.Cells.Count > 0)
             {
-
                 txtmunicipio.Text = p.row.Cells[1].Value.ToString().Replace("	", "");
-            }
-            catch (Exception ex)
-            {
-
             }
         }
     }

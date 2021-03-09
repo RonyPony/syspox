@@ -88,7 +88,10 @@ namespace Syspox_Cobros.UI
         {
             selector gg = new selector("direcciones");
             gg.ShowDialog();
-            txtdireccion.Text = gg.row.Cells[0].Value.ToString();
+            if (gg.row.Cells.Count > 0)
+            {
+                txtdireccion.Text = gg.row.Cells[0].Value.ToString();
+            }
         }
 
         private void txtdireccion_TextChanged(object sender, EventArgs e)

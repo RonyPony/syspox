@@ -76,7 +76,10 @@ namespace Syspox_Cobros.UI
         {
             selector select = new selector("clientes");
             select.ShowDialog();
-            txtpagoscedula.Text = select.row.Cells[1].Value.ToString();
+            if (select.row.Cells.Count > 0)
+            {
+                txtpagoscedula.Text = select.row.Cells[1].Value.ToString();
+            }
 
         }
 

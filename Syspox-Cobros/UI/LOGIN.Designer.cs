@@ -36,8 +36,12 @@
             this.boton2 = new Syspox_Cobros.controls.boton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.LinkLabel();
+            this.srv = new System.Windows.Forms.GroupBox();
+            this.boton3 = new Syspox_Cobros.controls.boton();
+            this.TXTSERVER = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.srv.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -151,20 +155,62 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(0, 614);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(0, 610);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 25);
+            this.label6.Size = new System.Drawing.Size(196, 29);
             this.label6.TabIndex = 9;
-            this.label6.Text = "VERSION 0.1";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label6.TabStop = true;
+            this.label6.Text = "PRODUCT INFO";
+            this.label6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.label6_LinkClicked);
+            // 
+            // srv
+            // 
+            this.srv.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.srv.Controls.Add(this.boton3);
+            this.srv.Controls.Add(this.TXTSERVER);
+            this.srv.ForeColor = System.Drawing.Color.White;
+            this.srv.Location = new System.Drawing.Point(166, 489);
+            this.srv.Name = "srv";
+            this.srv.Size = new System.Drawing.Size(724, 100);
+            this.srv.TabIndex = 10;
+            this.srv.TabStop = false;
+            this.srv.Text = "SERVER";
+            this.srv.Visible = false;
+            // 
+            // boton3
+            // 
+            this.boton3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.boton3.BackColor = System.Drawing.Color.Green;
+            this.boton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boton3.ForeColor = System.Drawing.Color.White;
+            this.boton3.Location = new System.Drawing.Point(526, 33);
+            this.boton3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton3.Name = "boton3";
+            this.boton3.Size = new System.Drawing.Size(158, 50);
+            this.boton3.TabIndex = 6;
+            this.boton3.Text = "APLICAR";
+            this.boton3.texto = "APLICAR";
+            this.boton3.UseVisualStyleBackColor = false;
+            this.boton3.Click += new System.EventHandler(this.boton3_Click);
+            // 
+            // TXTSERVER
+            // 
+            this.TXTSERVER.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TXTSERVER.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXTSERVER.ForeColor = System.Drawing.Color.Green;
+            this.TXTSERVER.Location = new System.Drawing.Point(28, 44);
+            this.TXTSERVER.Name = "TXTSERVER";
+            this.TXTSERVER.Size = new System.Drawing.Size(475, 30);
+            this.TXTSERVER.TabIndex = 4;
             // 
             // LOGIN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1068, 639);
+            this.Controls.Add(this.srv);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox2);
@@ -187,7 +233,10 @@
             this.Controls.SetChildIndex(this.pictureBox2, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.srv, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.srv.ResumeLayout(false);
+            this.srv.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,6 +252,9 @@
         private controls.boton boton2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.LinkLabel label6;
+        private System.Windows.Forms.GroupBox srv;
+        private controls.boton boton3;
+        private System.Windows.Forms.TextBox TXTSERVER;
     }
 }

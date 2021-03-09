@@ -15,7 +15,7 @@ namespace Syspox_Cobros.UI
         public mainMenu(string user)
         {
             InitializeComponent();
-            txtuser.Text = user;
+            txtuser.Text = user.ToUpper();
         }
 
         private void mainMenu_Load(object sender, EventArgs e)

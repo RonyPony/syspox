@@ -62,14 +62,20 @@ namespace Syspox_Cobros.UI
         {
             selector select = new selector("clientes");
             select.ShowDialog();
-            txtcedula.Text = select.row.Cells[1].Value.ToString();
+            if (select.row.Cells.Count > 0)
+            {
+                txtcedula.Text = select.row.Cells[1].Value.ToString();
+            }
         }
 
         private void boton3_Click(object sender, EventArgs e)
         {
             selector select = new selector("direcciones");
             select.ShowDialog();
-            txtdireccion.Text = select.row.Cells[0].Value.ToString();
+            if (select.row.Cells.Count > 0)
+            {
+                txtdireccion.Text = select.row.Cells[0].Value.ToString();
+            }
         }
     }
 }
