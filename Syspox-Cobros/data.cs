@@ -14,7 +14,7 @@ namespace Syspox_Cobros
     class data
     {
         static string db = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + "\\RIKU.FDB";
-        SqlConnection con = new SqlConnection(@"Server="+Syspox_Cobros.Properties.Settings.Default.servername+ ";Database=syspox;Integrated Security=true;");
+        SqlConnection conexion;
         public string activeUserId = "No Identificado";
 
         public string moneyFormat(string amount)
@@ -83,6 +83,7 @@ namespace Syspox_Cobros
         {
             try
             {
+                
                 abrir();
                 DataTable dt = new DataTable();
                 string consulta = "select id from clientes where cedula= '" + cedula+"'";
@@ -93,11 +94,12 @@ namespace Syspox_Cobros
                 if (dl.Rows.Count == 1)
                 {
                     string nombre = dl.Rows[0][0].ToString().ToUpper();
-                   
+                    cerrar();
                     return nombre;
                 }
                 else
                 {
+                    cerrar();
                     return null;
                 }
 
@@ -229,13 +231,13 @@ namespace Syspox_Cobros
             }
         }
 
-        public void delete(string tabla, string conditionals)
+        public bool delete(string tabla, string conditionals)
         {
             try
             {
                 if (conditionals == "")
                 {
-                    return;
+                    return false;
                 }
                 else
                 {
@@ -246,12 +248,14 @@ namespace Syspox_Cobros
                     comando.Connection = ver();
                     comando.ExecuteNonQuery();
                     cerrar();
+                    return true;
                 }
 
             }
             catch (Exception ex)
             {
                 showError(ex);
+                return false;
             }
             finally
             {
@@ -344,6 +348,7 @@ namespace Syspox_Cobros
                     datax.Add(telefono);
                     datax.Add(celular);
                     datax.Add(comentario);
+                    cerrar();
                     return datax;
                 }
                 else
@@ -571,9 +576,12 @@ namespace Syspox_Cobros
 
         public void abrir()
         {
+            SqlConnection con = new SqlConnection(@"Server=" + Syspox_Cobros.Properties.Settings.Default.servername + ";Database=syspox;Integrated Security=true;");
+            
             if (con.State != ConnectionState.Open)
             {
                 con.Open();
+                conexion = con;
             }
             else
             {
@@ -583,9 +591,9 @@ namespace Syspox_Cobros
         }
         public void cerrar()
         {
-            if (con.State != ConnectionState.Closed)
+            if (ver().State != ConnectionState.Closed)
             {
-                con.Close();
+                ver().Close();
             }
         }
 
@@ -803,7 +811,7 @@ namespace Syspox_Cobros
 
         public SqlConnection ver()
         {
-            return con;
+            return conexion;
         }
 
         public int getCount(string table, string conditionals)
@@ -872,6 +880,7 @@ namespace Syspox_Cobros
             try
             {
                 DataTable table = new DataTable();
+                abrir();
                 using (var con = ver())
                 using (var cmd = new SqlCommand(sp, con))                
                 using (var da = new SqlDataAdapter(cmd))
@@ -879,6 +888,7 @@ namespace Syspox_Cobros
                     cmd.CommandType = CommandType.StoredProcedure;
                     da.Fill(table);
                 }
+                cerrar();
                 return table;
             }
             catch (SqlException fbex)
@@ -934,6 +944,7 @@ namespace Syspox_Cobros
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+                cerrar();
                 return dt;
             }
             catch (SqlException fbex)

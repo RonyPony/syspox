@@ -122,10 +122,9 @@ namespace Syspox_Cobros.UI
                     lblmonto.Text = "Restante RD$:" + (pagoEsperado - Convert.ToInt32(txtmonto.Text)).ToString();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show(ex.Message);
             }
             
         }

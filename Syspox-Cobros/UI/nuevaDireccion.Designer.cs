@@ -283,6 +283,7 @@
             this.boton3.texto = "ELIMINAR";
             this.boton3.UseVisualStyleBackColor = false;
             this.boton3.Visible = false;
+            this.boton3.Click += new System.EventHandler(this.boton3_Click);
             // 
             // boton4
             // 

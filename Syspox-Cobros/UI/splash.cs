@@ -27,6 +27,8 @@ namespace Syspox_Cobros
         private void splash_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            data data = new data();
+            label4.Text = data.VersionLabel;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -42,6 +44,16 @@ namespace Syspox_Cobros
             {
                 progressBar1.Value ++;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

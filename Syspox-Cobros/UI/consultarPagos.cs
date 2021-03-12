@@ -52,7 +52,7 @@ namespace Syspox_Cobros.UI
             }
             if (txtmes.Text != string.Empty)
             {
-                whereclause += " and p.mes=" + txtmes.Text;
+                whereclause += " and p.mes='" + txtmes.Text+"'";
             }
             data data2 = new data();
             dataGridView1.DataSource = data2.getTableCustomQuery("SELECT c.nombre as NOMBRE,c.cedula as CEDULA,'CALLE '+upper(d.calle)+', NUMERO '+d.numero+'. '+upper(d.sector)+', '+upper(d.municipio) as DIRECCION,d.monto as TARIFA, c.telefono as TELEFONO,c.celular as CELULAR  FROM pagos as p inner join clientes as c on c.id = p.idCliente inner join direcciones d on d.id=c.addressId where " + whereclause);

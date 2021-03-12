@@ -45,6 +45,7 @@
             this.boton3 = new Syspox_Cobros.controls.boton();
             this.txtcomentario = new System.Windows.Forms.TextBox();
             this.lbldireccion = new System.Windows.Forms.Label();
+            this.boton4 = new Syspox_Cobros.controls.boton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,6 +115,7 @@
             this.txtdireccion.ForeColor = System.Drawing.Color.Green;
             this.txtdireccion.Location = new System.Drawing.Point(317, 326);
             this.txtdireccion.Name = "txtdireccion";
+            this.txtdireccion.ReadOnly = true;
             this.txtdireccion.Size = new System.Drawing.Size(188, 30);
             this.txtdireccion.TabIndex = 29;
             this.txtdireccion.TextChanged += new System.EventHandler(this.txtdireccion_TextChanged);
@@ -259,11 +261,31 @@
             this.lbldireccion.TabIndex = 40;
             this.lbldireccion.Text = "-------------";
             // 
+            // boton4
+            // 
+            this.boton4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.boton4.BackColor = System.Drawing.Color.Green;
+            this.boton4.FlatAppearance.BorderSize = 0;
+            this.boton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boton4.ForeColor = System.Drawing.Color.White;
+            this.boton4.Location = new System.Drawing.Point(613, 650);
+            this.boton4.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton4.Name = "boton4";
+            this.boton4.Size = new System.Drawing.Size(172, 51);
+            this.boton4.TabIndex = 70;
+            this.boton4.Text = "ELIMINAR";
+            this.boton4.texto = "ELIMINAR";
+            this.boton4.UseVisualStyleBackColor = false;
+            this.boton4.Visible = false;
+            this.boton4.Click += new System.EventHandler(this.boton4_Click);
+            // 
             // nuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 723);
+            this.Controls.Add(this.boton4);
             this.Controls.Add(this.lbldireccion);
             this.Controls.Add(this.txtcomentario);
             this.Controls.Add(this.boton3);
@@ -302,6 +324,7 @@
             this.Controls.SetChildIndex(this.boton3, 0);
             this.Controls.SetChildIndex(this.txtcomentario, 0);
             this.Controls.SetChildIndex(this.lbldireccion, 0);
+            this.Controls.SetChildIndex(this.boton4, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -327,5 +350,6 @@
         private controls.boton boton3;
         private System.Windows.Forms.TextBox txtcomentario;
         private System.Windows.Forms.Label lbldireccion;
+        private controls.boton boton4;
     }
 }

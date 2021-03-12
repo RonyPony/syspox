@@ -144,11 +144,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("PMingLiU-ExtB", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(208, 100);
+            this.label5.Location = new System.Drawing.Point(122, 107);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(682, 80);
+            this.label5.Size = new System.Drawing.Size(832, 80);
             this.label5.TabIndex = 8;
-            this.label5.Text = "SYSPOX SYSTEMS";
+            this.label5.Text = "SYSPOX ECOSYSTEMS";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label6

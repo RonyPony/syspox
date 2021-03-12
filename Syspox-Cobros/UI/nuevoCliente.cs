@@ -21,6 +21,7 @@ namespace Syspox_Cobros.UI
             {
                 id = idh;
                 cargar(idh);
+                boton4.Visible = true;
             }
         }
 
@@ -38,6 +39,7 @@ namespace Syspox_Cobros.UI
         private void nuevoCliente_Load(object sender, EventArgs e)
         {
             this.titulo = "nuevo cliente";
+
         }
 
         private void boton2_Click(object sender, EventArgs e)
@@ -97,6 +99,22 @@ namespace Syspox_Cobros.UI
         private void txtdireccion_TextChanged(object sender, EventArgs e)
         {
             lbldireccion.Text = data.getAdress(txtdireccion.Text);
+        }
+
+        private void boton4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (data.delete("clientes", "id=" + id))
+                {
+                    MessageBox.Show("CLIENTE ELIMINADO");
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

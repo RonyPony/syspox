@@ -74,9 +74,9 @@ namespace Syspox_Cobros
             {
 
                 case "allpayments":
-                    
+
                     DataTable tabla = data.getTableSP("SP_reportAllPayments");
-                    
+
                     foreach (DataRow item in tabla.Rows)
                     {
 
@@ -93,9 +93,9 @@ namespace Syspox_Cobros
                     }
                     break;
                 case "allpaymentsbycustomer":
-                    DataTable tabla2 = data.getTableSPwithAttribute("SP_reportAllPaymentsByCustomer","cedula",currentCedula);
-                    string n="", c = "";
-                   
+                    DataTable tabla2 = data.getTableSPwithAttribute("SP_reportAllPaymentsByCustomer", "cedula", currentCedula);
+                    string n = "", c = "";
+
                     foreach (DataRow item in tabla2.Rows)
                     {
                         c = item[0].ToString();
@@ -273,14 +273,14 @@ namespace Syspox_Cobros
                 //ppvw.ShowDialog();
 
 
-                //System.Windows.Forms.PrintDialog pd = new System.Windows.Forms.PrintDialog();
-                //pd.Document = p;
-                //DialogResult result = pd.ShowDialog();
+                System.Windows.Forms.PrintDialog pd = new System.Windows.Forms.PrintDialog();
+                pd.Document = p;
+                DialogResult result = pd.ShowDialog();
 
-                //if (result == System.Windows.Forms.DialogResult.OK)
-                //{
-                p.Print();
-                //}
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    p.Print();
+                }
 
 
             }
@@ -291,16 +291,16 @@ namespace Syspox_Cobros
 
         }
 
-        public void printPayment(string Cedulacliente,string paid)
+        public void printPayment(string Cedulacliente, string paid)
         {
             string businessName = "Colegio de abogados jose manuel".ToUpper();
             string footercustom = "este mensaje es customizable";
-            string mes,fecha,nombre,id;
+            string mes, fecha, nombre, id;
             string a = data.moneyFormat(paid);
             id = data.getCustomerId(Cedulacliente);
             mes = data.getSingleField("mes", "pagos", "idCliente=" + id + " order by fecha desc");
             fecha = data.getSingleField("fecha", "pagos", "idCliente=" + id + " order by fecha desc");
-            nombre = data.getSingleField("nombre","clientes","id="+id);
+            nombre = data.getSingleField("nombre", "clientes", "id=" + id);
             string company = StringLimit(businessName, 32, true);
             string linea2 = "Factura numero " + StringLimit(Guid.NewGuid().ToString(), 5, false);
             string receiptString = "==================================\n" +
@@ -345,7 +345,7 @@ namespace Syspox_Cobros
             PrintDocument p = new PrintDocument();
             p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
             {
-                e1.Graphics.DrawString(StringLimit("syspox systems".ToUpper(),15,false), new Font("OCR A Extended", 20), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+                e1.Graphics.DrawString(StringLimit("syspox systems".ToUpper(), 15, false), new Font("OCR A Extended", 20), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
 
             };
             p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)

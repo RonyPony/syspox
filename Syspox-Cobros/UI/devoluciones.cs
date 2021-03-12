@@ -20,7 +20,12 @@ namespace Syspox_Cobros.UI
 
         private void devoluciones_Load(object sender, EventArgs e)
         {
+            recargar();
+        }
 
+        private void recargar()
+        {
+            dataGridView1.DataSource = data.getTableSP("SP_getDev");
         }
 
         private void boton5_Click(object sender, EventArgs e)
@@ -76,10 +81,16 @@ namespace Syspox_Cobros.UI
                 idCliente = data.getCustomerId(txtcedula.Text);
                 descri = textBox8.Text;
                 monto = txtmonto.Text;
-                if (data.save("devoluciones", "idCliente,descripcion,monto", "'" + idCliente + "','" + descri + "','" + monto + "'"))
+                if (data.save("devoluciones", "idCliente,descripcion,monto,fecha", "'" + idCliente + "','" + descri + "','" + monto + "','"+DateTime.Now.ToString()+"'"))
                 {
                     MessageBox.Show("DEVOLUCION REGISTRADA");
-                    this.Close();
+                    recargar();
+                    txtcedula.Clear();
+                    txtdireccion.Clear();
+                    txtmonto.Clear();
+                    txtnombre.Clear();
+                    textBox8.Clear();
+                    //this.Close();
                 }
             }
         }
@@ -110,6 +121,32 @@ namespace Syspox_Cobros.UI
             }
 
             return false;
+
+        }
+
+        private void txtcedula_TextChanged(object sender, EventArgs e)
+        {
+            if (txtcedula.Text.Replace("-","").Length ==11)
+            {
+                getInfo();
+            }
+        }
+
+        private void getInfo()
+        {
+            data.cerrar();
+            string hid = data.getCustomerId(txtcedula.Text);
+            List<string> info = data.getClienteInfo(hid);
+            if (info.Count <= 0)
+            {
+
+            }
+            else
+            {
+                txtnombre.Text = info[2];
+                txtdireccion.Text = info[3];
+                label11.Text = data.getAdress(txtdireccion.Text);
+            }
 
         }
     }

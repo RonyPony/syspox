@@ -89,5 +89,21 @@ namespace Syspox_Cobros.UI
                 txtmunicipio.Text = p.row.Cells[1].Value.ToString().Replace("	", "");
             }
         }
+
+        private void boton3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (data.delete("direcciones", "id=" + id))
+                {
+                    MessageBox.Show("DIRECCION ELIMINADA");
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
