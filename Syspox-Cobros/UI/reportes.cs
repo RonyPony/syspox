@@ -27,6 +27,10 @@ namespace Syspox_Cobros.UI
             txtmes.DataSource = table;
             txtmes.DisplayMember = "name";
             txtmes.Text = "";
+
+            txtmes2.DataSource = table;
+            txtmes2.DisplayMember = "name";
+            txtmes2.Text = "";
         }
 
         private void boton6_Click(object sender, EventArgs e)
@@ -50,7 +54,7 @@ namespace Syspox_Cobros.UI
             //print.todosLosPagosPorCliente(txtpagoscedula.Text);
             DataTable bycus = data.getTableCustomQuery("exec SP_reportAllPaymentsByCustomer '"+txtpagoscedula.Text+"'");
             string res;
-            string cols = "REPORTE DE PAGOS DE UN CLIENTE \n ----------------------------------------- \n" + "|CEDULA|NOMBRE|MES|FECHA|PAGADO|TARIFA|DIFERENCIA|".Replace("|","\n")+"============================= \n";
+            string cols = "REPORTE DE PAGOS DEL CLIENTE "+data.getClienteNombre(data.getCustomerId(txtpagoscedula.Text))+" ("+txtpagoscedula.Text+")\n ----------------------------------------- \n" + "|CEDULA|NOMBRE|MES|FECHA|PAGADO|TARIFA|DIFERENCIA|".Replace("|","\n")+"============================= \n";
             res = cols+string.Join(Environment.NewLine + "--------------------------------" + Environment.NewLine, bycus.Rows.OfType<DataRow>().Select(x => string.Join("\n", x.ItemArray)));
             if (bycus.Rows.Count<=0)
             {
@@ -87,13 +91,38 @@ namespace Syspox_Cobros.UI
         {
             DataTable bycus = data.getTableCustomQuery("exec SP_reportAllPaymentsByMonth'" + txtmes.Text + "'");
             string res;
-            string cols = "REPORTE DE PAGOS DE UN MES \n ----------------------------------------- \n" + "|NOMBRE|CEDULA|FECHA|PAGADO|TARIFA|DIFERENCIA|TELEFONO|CELULAR|".Replace("|", "\n") + "============================= \n";
+            string cols = "REPORTE DE PAGOS DEL MES DE "+txtmes.Text+" \n ----------------------------------------- \n" + "|NOMBRE|CEDULA|FECHA|PAGADO|TARIFA|DIFERENCIA|TELEFONO|CELULAR|".Replace("|", "\n") + "============================= \n";
             res = cols + string.Join(Environment.NewLine + "--------------------------------" + Environment.NewLine, bycus.Rows.OfType<DataRow>().Select(x => string.Join("\n", x.ItemArray)));
             if (bycus.Rows.Count <= 0)
             {
                 res += "NO HAY DATOS";
             }
             print.caboom(res);
+        }
+
+        private void boton11_Click(object sender, EventArgs e)
+        {
+            selector select = new selector("clientes");
+            select.ShowDialog();
+            if (select.row.Cells.Count > 0)
+            {
+                cedulaespecificpayment.Text = select.row.Cells[1].Value.ToString();
+            }
+        }
+
+        private void boton12_Click(object sender, EventArgs e)
+        {
+            selector select = new selector("clientes");
+            select.ShowDialog();
+            if (select.row.Cells.Count > 0)
+            {
+                ceduladev.Text = select.row.Cells[1].Value.ToString();
+            }
+        }
+
+        private void boton5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

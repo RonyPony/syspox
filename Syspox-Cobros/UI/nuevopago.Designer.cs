@@ -118,6 +118,7 @@
             this.txtmonto.Size = new System.Drawing.Size(188, 30);
             this.txtmonto.TabIndex = 8;
             this.txtmonto.TextChanged += new System.EventHandler(this.txtmonto_TextChanged);
+            this.txtmonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmonto_KeyPress);
             // 
             // label6
             // 
@@ -285,7 +286,7 @@
             this.txtultimomonto.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtultimomonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtultimomonto.ForeColor = System.Drawing.Color.White;
-            this.txtultimomonto.Location = new System.Drawing.Point(0, 48);
+            this.txtultimomonto.Location = new System.Drawing.Point(0, 53);
             this.txtultimomonto.Name = "txtultimomonto";
             this.txtultimomonto.Size = new System.Drawing.Size(337, 29);
             this.txtultimomonto.TabIndex = 42;
@@ -334,7 +335,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtcedula);
             this.Controls.Add(this.label3);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "nuevopago";
             this.Text = "nuevopago";
             this.Load += new System.EventHandler(this.nuevopago_Load);

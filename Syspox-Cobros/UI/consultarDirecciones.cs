@@ -39,5 +39,24 @@ namespace Syspox_Cobros.UI
             nuevaDireccion p = new nuevaDireccion(Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value));
             p.Show();
         }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

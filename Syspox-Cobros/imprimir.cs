@@ -328,35 +328,33 @@ namespace Syspox_Cobros
             string customFooter = "----------------------------------\n " +
                                   "Le atendió: \n \n \n" + footercustom;
 
+            
 
+            
             try
             {
+                PrintDocument p = new PrintDocument();
+                p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
+                {
+                    e1.Graphics.DrawString(StringLimit("syspox systems".ToUpper(), 15, false), new Font("OCR A Extended", 20), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                data.cerrar();
-            }
+                };
+                p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
+                {
+                    e1.Graphics.DrawString(receiptString, new Font("OCR A Extended", 10), new SolidBrush(Color.Black), new RectangleF(0, 50, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
 
-            PrintDocument p = new PrintDocument();
-            p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
-            {
-                e1.Graphics.DrawString(StringLimit("syspox systems".ToUpper(), 15, false), new Font("OCR A Extended", 20), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+                };
 
-            };
-            p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
-            {
-                e1.Graphics.DrawString(receiptString, new Font("OCR A Extended", 10), new SolidBrush(Color.Black), new RectangleF(0, 50, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
-
-            };
-            try
-            {
                 if (true)
                 {
+                    System.Windows.Forms.PrintDialog pd = new System.Windows.Forms.PrintDialog();
+                    pd.Document = p;
+                    DialogResult result = pd.ShowDialog();
+
+                    if (result == System.Windows.Forms.DialogResult.OK)
+                    {
+                        p.Print();
+                    }
                     p.Print();
                 }
             }

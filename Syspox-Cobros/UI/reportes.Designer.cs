@@ -36,22 +36,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.boton3 = new Syspox_Cobros.controls.boton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtmes = new System.Windows.Forms.ComboBox();
             this.boton4 = new Syspox_Cobros.controls.boton();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.boton11 = new Syspox_Cobros.controls.boton();
+            this.cedulaespecificpayment = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtmes2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.boton5 = new Syspox_Cobros.controls.boton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.boton6 = new Syspox_Cobros.controls.boton();
             this.boton7 = new Syspox_Cobros.controls.boton();
             this.boton8 = new Syspox_Cobros.controls.boton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.boton12 = new Syspox_Cobros.controls.boton();
+            this.ceduladev = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.boton9 = new Syspox_Cobros.controls.boton();
-            this.txtmes = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -153,7 +157,7 @@
             this.boton3.BackColor = System.Drawing.Color.Green;
             this.boton3.FlatAppearance.BorderSize = 0;
             this.boton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boton3.ForeColor = System.Drawing.Color.White;
             this.boton3.Location = new System.Drawing.Point(33, 325);
             this.boton3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -168,6 +172,7 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.txtmes);
             this.groupBox2.Controls.Add(this.boton4);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
@@ -177,6 +182,17 @@
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "PAGOS DE UN MES";
+            // 
+            // txtmes
+            // 
+            this.txtmes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtmes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtmes.ForeColor = System.Drawing.Color.Green;
+            this.txtmes.FormattingEnabled = true;
+            this.txtmes.Location = new System.Drawing.Point(151, 30);
+            this.txtmes.Name = "txtmes";
+            this.txtmes.Size = new System.Drawing.Size(194, 33);
+            this.txtmes.TabIndex = 19;
             // 
             // boton4
             // 
@@ -209,10 +225,13 @@
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.boton11);
+            this.groupBox3.Controls.Add(this.cedulaespecificpayment);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.txtmes2);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.boton5);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Enabled = false;
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(549, 237);
             this.groupBox3.Name = "groupBox3";
@@ -221,14 +240,54 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "PAGOS ESPECIFICOS";
             // 
-            // textBox4
+            // boton11
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Green;
-            this.textBox4.Location = new System.Drawing.Point(174, 88);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(289, 30);
-            this.textBox4.TabIndex = 20;
+            this.boton11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.boton11.BackColor = System.Drawing.Color.Green;
+            this.boton11.FlatAppearance.BorderSize = 0;
+            this.boton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.boton11.ForeColor = System.Drawing.Color.White;
+            this.boton11.Location = new System.Drawing.Point(354, 86);
+            this.boton11.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton11.Name = "boton11";
+            this.boton11.Size = new System.Drawing.Size(139, 30);
+            this.boton11.TabIndex = 44;
+            this.boton11.Text = "SELECCIONAR";
+            this.boton11.texto = "SELECCIONAR";
+            this.boton11.UseVisualStyleBackColor = false;
+            this.boton11.Click += new System.EventHandler(this.boton11_Click);
+            // 
+            // cedulaespecificpayment
+            // 
+            this.cedulaespecificpayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cedulaespecificpayment.ForeColor = System.Drawing.Color.Green;
+            this.cedulaespecificpayment.Location = new System.Drawing.Point(174, 87);
+            this.cedulaespecificpayment.Name = "cedulaespecificpayment";
+            this.cedulaespecificpayment.Size = new System.Drawing.Size(166, 30);
+            this.cedulaespecificpayment.TabIndex = 43;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(33, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(68, 29);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "MES";
+            // 
+            // txtmes2
+            // 
+            this.txtmes2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtmes2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtmes2.ForeColor = System.Drawing.Color.Green;
+            this.txtmes2.FormattingEnabled = true;
+            this.txtmes2.Location = new System.Drawing.Point(174, 28);
+            this.txtmes2.Name = "txtmes2";
+            this.txtmes2.Size = new System.Drawing.Size(194, 33);
+            this.txtmes2.TabIndex = 21;
             // 
             // label4
             // 
@@ -246,7 +305,7 @@
             this.boton5.BackColor = System.Drawing.Color.Green;
             this.boton5.FlatAppearance.BorderSize = 0;
             this.boton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boton5.ForeColor = System.Drawing.Color.White;
             this.boton5.Location = new System.Drawing.Point(20, 149);
             this.boton5.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -256,15 +315,7 @@
             this.boton5.Text = "IMPRIMIR PAGOS ESPECIFICOS";
             this.boton5.texto = "IMPRIMIR PAGOS ESPECIFICOS";
             this.boton5.UseVisualStyleBackColor = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Green;
-            this.textBox3.Location = new System.Drawing.Point(174, 34);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(289, 30);
-            this.textBox3.TabIndex = 18;
+            this.boton5.Click += new System.EventHandler(this.boton5_Click);
             // 
             // label2
             // 
@@ -299,9 +350,10 @@
             // 
             this.boton7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.boton7.BackColor = System.Drawing.Color.Green;
+            this.boton7.Enabled = false;
             this.boton7.FlatAppearance.BorderSize = 0;
             this.boton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boton7.ForeColor = System.Drawing.Color.White;
             this.boton7.Location = new System.Drawing.Point(1084, 69);
             this.boton7.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -316,9 +368,10 @@
             // 
             this.boton8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.boton8.BackColor = System.Drawing.Color.Green;
+            this.boton8.Enabled = false;
             this.boton8.FlatAppearance.BorderSize = 0;
             this.boton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boton8.ForeColor = System.Drawing.Color.White;
             this.boton8.Location = new System.Drawing.Point(1084, 140);
             this.boton8.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -332,9 +385,11 @@
             // groupBox4
             // 
             this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox4.Controls.Add(this.textBox5);
+            this.groupBox4.Controls.Add(this.boton12);
+            this.groupBox4.Controls.Add(this.ceduladev);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.boton9);
+            this.groupBox4.Enabled = false;
             this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(1069, 237);
             this.groupBox4.Name = "groupBox4";
@@ -343,21 +398,39 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "DEVOLUCIONES DE UN CLIENTE";
             // 
-            // textBox5
+            // boton12
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Green;
-            this.textBox5.Location = new System.Drawing.Point(169, 27);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(289, 30);
-            this.textBox5.TabIndex = 20;
+            this.boton12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.boton12.BackColor = System.Drawing.Color.Green;
+            this.boton12.FlatAppearance.BorderSize = 0;
+            this.boton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.boton12.ForeColor = System.Drawing.Color.White;
+            this.boton12.Location = new System.Drawing.Point(344, 30);
+            this.boton12.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton12.Name = "boton12";
+            this.boton12.Size = new System.Drawing.Size(139, 30);
+            this.boton12.TabIndex = 46;
+            this.boton12.Text = "SELECCIONAR";
+            this.boton12.texto = "SELECCIONAR";
+            this.boton12.UseVisualStyleBackColor = false;
+            this.boton12.Click += new System.EventHandler(this.boton12_Click);
+            // 
+            // ceduladev
+            // 
+            this.ceduladev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ceduladev.ForeColor = System.Drawing.Color.Green;
+            this.ceduladev.Location = new System.Drawing.Point(164, 31);
+            this.ceduladev.Name = "ceduladev";
+            this.ceduladev.Size = new System.Drawing.Size(166, 30);
+            this.ceduladev.TabIndex = 45;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(28, 27);
+            this.label5.Location = new System.Drawing.Point(28, 32);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 29);
             this.label5.TabIndex = 19;
@@ -379,16 +452,16 @@
             this.boton9.texto = "IMPRIMIR PAGOS ESPECIFICOS";
             this.boton9.UseVisualStyleBackColor = false;
             // 
-            // txtmes
+            // label7
             // 
-            this.txtmes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtmes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtmes.ForeColor = System.Drawing.Color.Green;
-            this.txtmes.FormattingEnabled = true;
-            this.txtmes.Location = new System.Drawing.Point(151, 30);
-            this.txtmes.Name = "txtmes";
-            this.txtmes.Size = new System.Drawing.Size(194, 33);
-            this.txtmes.TabIndex = 19;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(33, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 29);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "MES";
             // 
             // reportes
             // 
@@ -420,6 +493,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -440,19 +514,23 @@
         private controls.boton boton4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
         private controls.boton boton5;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
         private controls.boton boton6;
         private controls.boton boton7;
         private controls.boton boton8;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
         private controls.boton boton9;
         private controls.boton boton10;
         private System.Windows.Forms.ComboBox txtmes;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox txtmes2;
+        private controls.boton boton11;
+        private System.Windows.Forms.TextBox cedulaespecificpayment;
+        private controls.boton boton12;
+        private System.Windows.Forms.TextBox ceduladev;
+        private System.Windows.Forms.Label label7;
     }
 }

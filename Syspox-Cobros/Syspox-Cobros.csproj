@@ -8,11 +8,12 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Syspox_Cobros</RootNamespace>
     <AssemblyName>Syspox-Cobros</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>D:\tmp\published\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -28,7 +29,7 @@
     <PublisherName>Ronel Cruz</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationRevision>16</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -161,6 +162,12 @@
     <Compile Include="UI\selector.Designer.cs">
       <DependentUpon>selector.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\settings.Designer.cs">
+      <DependentUpon>settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\selector.resx">
       <DependentUpon>selector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\settings.resx">
+      <DependentUpon>settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
@@ -293,6 +303,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Group 54.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_fullscreen_exit_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_fullscreen_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_maximize_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_minimize_white_18dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\round_close_white_18dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -373,7 +373,7 @@ namespace Syspox_Cobros
             {
                 abrir();
                 DataTable dt = new DataTable();
-                string consulta = "select nombre from clientes where idcliente = '" + id + "';";
+                string consulta = "select nombre from clientes where id = '" + id + "';";
                 SqlCommand comando = new SqlCommand(consulta, ver());
                 SqlDataAdapter adaptador = new SqlDataAdapter(comando);
                 DataTable dl = new DataTable();

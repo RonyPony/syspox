@@ -219,6 +219,7 @@
             this.txtmonto.Name = "txtmonto";
             this.txtmonto.Size = new System.Drawing.Size(188, 30);
             this.txtmonto.TabIndex = 66;
+            this.txtmonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmonto_KeyPress);
             // 
             // label7
             // 
@@ -340,7 +341,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtnombre);
             this.Controls.Add(this.label3);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "nuevaDireccion";
             this.Text = "nuevaDireccion";
             this.Load += new System.EventHandler(this.nuevaDireccion_Load);
