@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Syspox-Cobros")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Syspox es un sistema de administracion de direcciones y cobros desarrollado con el fin de ayudar y mejorar la forma en que se administra la informacion dentro de las empresas modernas, para mejoras, errores, modificaciones o cualquier situacion, no dude en escribirme [ronel.cruz.a8@gmail.com]        [809-716-2373]")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Ronel Cruz")]
 [assembly: AssemblyProduct("Syspox-Cobros")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]

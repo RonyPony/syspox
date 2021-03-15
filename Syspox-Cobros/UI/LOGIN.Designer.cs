@@ -220,7 +220,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "LOGIN";
             this.Text = "LOGIN";
             this.Load += new System.EventHandler(this.LOGIN_Load);

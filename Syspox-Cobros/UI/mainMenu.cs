@@ -253,5 +253,11 @@ namespace Syspox_Cobros.UI
         {
             txttime.Text = DateTime.Now.ToString();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AboutBox PP = new AboutBox();
+            PP.Show();
+        }
     }
 }

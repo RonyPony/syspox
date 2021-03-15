@@ -59,6 +59,7 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -436,11 +437,25 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel1.Location = new System.Drawing.Point(0, 53);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(103, 17);
+            this.linkLabel1.TabIndex = 12;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "INFORMACION";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // mainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 824);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel10);
@@ -450,7 +465,6 @@
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "mainMenu";
             this.Text = "mainMenu";
             this.Load += new System.EventHandler(this.mainMenu_Load);
@@ -463,6 +477,7 @@
             this.Controls.SetChildIndex(this.panel10, 0);
             this.Controls.SetChildIndex(this.panel7, 0);
             this.Controls.SetChildIndex(this.panel9, 0);
+            this.Controls.SetChildIndex(this.linkLabel1, 0);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -490,6 +505,7 @@
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -525,5 +541,6 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

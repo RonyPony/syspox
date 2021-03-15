@@ -26,10 +26,14 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://ronycruz.myartsonline.com/updater/syspox/</InstallUrl>
     <UpdateUrl>http://ronycruz.myartsonline.com/updater/syspox/</UpdateUrl>
+    <SupportUrl>http://ronycruz.myartsonline.com/</SupportUrl>
+    <ErrorReportUrl>http://ronycruz.myartsonline.com/</ErrorReportUrl>
+    <ProductName>syspox</ProductName>
     <PublisherName>Ronel Cruz</PublisherName>
+    <SuiteName>Syspox Ecosystems</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>16</ApplicationRevision>
+    <ApplicationRevision>19</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -90,6 +94,12 @@
     </Compile>
     <Compile Include="data.cs" />
     <Compile Include="imprimir.cs" />
+    <Compile Include="UI\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\BASEFORM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +199,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\BASEFORM.resx">
       <DependentUpon>BASEFORM.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,9 +292,9 @@
     <None Include="Resources\keyboard_return-24px.png" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

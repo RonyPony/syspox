@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BASEFORM));
             this.panel1 = new System.Windows.Forms.Panel();
             this.exit = new System.Windows.Forms.PictureBox();
             this.normal = new System.Windows.Forms.PictureBox();
@@ -128,6 +129,7 @@
             this.min.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.min.TabIndex = 1;
             this.min.TabStop = false;
+            this.min.Click += new System.EventHandler(this.min_Click);
             // 
             // BASEFORM
             // 
@@ -137,6 +139,7 @@
             this.ClientSize = new System.Drawing.Size(938, 551);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BASEFORM";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BASEFORM";

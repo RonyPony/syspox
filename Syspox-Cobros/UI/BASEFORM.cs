@@ -94,5 +94,10 @@ namespace Syspox_Cobros.UI
             fullscreen = true;
             p();
         }
+
+        private void min_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
