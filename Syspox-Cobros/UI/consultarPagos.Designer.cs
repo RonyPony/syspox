@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.boton1 = new Syspox_Cobros.controls.boton();
             this.boton2 = new Syspox_Cobros.controls.boton();
             this.txtnombre = new System.Windows.Forms.TextBox();
@@ -42,7 +42,14 @@
             this.boton3 = new Syspox_Cobros.controls.boton();
             this.boton4 = new Syspox_Cobros.controls.boton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.boton5 = new Syspox_Cobros.controls.boton();
+            this.boton6 = new Syspox_Cobros.controls.boton();
+            this.srv = new System.Windows.Forms.GroupBox();
+            this.boton8 = new Syspox_Cobros.controls.boton();
+            this.boton7 = new Syspox_Cobros.controls.boton();
+            this.TXTmodpag = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.srv.SuspendLayout();
             this.SuspendLayout();
             // 
             // boton1
@@ -53,7 +60,7 @@
             this.boton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boton1.ForeColor = System.Drawing.Color.White;
-            this.boton1.Location = new System.Drawing.Point(423, 653);
+            this.boton1.Location = new System.Drawing.Point(799, 653);
             this.boton1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.boton1.Name = "boton1";
             this.boton1.Size = new System.Drawing.Size(159, 51);
@@ -214,14 +221,14 @@
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(48, 300);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -231,11 +238,111 @@
             this.dataGridView1.Size = new System.Drawing.Size(910, 343);
             this.dataGridView1.TabIndex = 42;
             // 
+            // boton5
+            // 
+            this.boton5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.boton5.BackColor = System.Drawing.Color.Green;
+            this.boton5.FlatAppearance.BorderSize = 0;
+            this.boton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.boton5.ForeColor = System.Drawing.Color.White;
+            this.boton5.Location = new System.Drawing.Point(48, 667);
+            this.boton5.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton5.Name = "boton5";
+            this.boton5.Size = new System.Drawing.Size(139, 30);
+            this.boton5.TabIndex = 43;
+            this.boton5.Text = "ELIMINAR";
+            this.boton5.texto = "ELIMINAR";
+            this.boton5.UseVisualStyleBackColor = false;
+            this.boton5.Click += new System.EventHandler(this.boton5_Click);
+            // 
+            // boton6
+            // 
+            this.boton6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.boton6.BackColor = System.Drawing.Color.Green;
+            this.boton6.FlatAppearance.BorderSize = 0;
+            this.boton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
+            this.boton6.ForeColor = System.Drawing.Color.White;
+            this.boton6.Location = new System.Drawing.Point(199, 667);
+            this.boton6.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton6.Name = "boton6";
+            this.boton6.Size = new System.Drawing.Size(194, 30);
+            this.boton6.TabIndex = 44;
+            this.boton6.Text = "MODIFICAR MONTO";
+            this.boton6.texto = "MODIFICAR MONTO";
+            this.boton6.UseVisualStyleBackColor = false;
+            this.boton6.Click += new System.EventHandler(this.boton6_Click);
+            // 
+            // srv
+            // 
+            this.srv.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.srv.Controls.Add(this.boton8);
+            this.srv.Controls.Add(this.boton7);
+            this.srv.Controls.Add(this.TXTmodpag);
+            this.srv.ForeColor = System.Drawing.Color.White;
+            this.srv.Location = new System.Drawing.Point(159, 427);
+            this.srv.Name = "srv";
+            this.srv.Size = new System.Drawing.Size(724, 100);
+            this.srv.TabIndex = 45;
+            this.srv.TabStop = false;
+            this.srv.Text = "CAMBIAR MONTO";
+            this.srv.Visible = false;
+            // 
+            // boton8
+            // 
+            this.boton8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.boton8.BackColor = System.Drawing.Color.Green;
+            this.boton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boton8.ForeColor = System.Drawing.Color.White;
+            this.boton8.Location = new System.Drawing.Point(557, 33);
+            this.boton8.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton8.Name = "boton8";
+            this.boton8.Size = new System.Drawing.Size(158, 50);
+            this.boton8.TabIndex = 7;
+            this.boton8.Text = "CERRAR";
+            this.boton8.texto = "CERRAR";
+            this.boton8.UseVisualStyleBackColor = false;
+            this.boton8.Click += new System.EventHandler(this.boton8_Click);
+            // 
+            // boton7
+            // 
+            this.boton7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.boton7.BackColor = System.Drawing.Color.Green;
+            this.boton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boton7.ForeColor = System.Drawing.Color.White;
+            this.boton7.Location = new System.Drawing.Point(393, 33);
+            this.boton7.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton7.Name = "boton7";
+            this.boton7.Size = new System.Drawing.Size(158, 50);
+            this.boton7.TabIndex = 6;
+            this.boton7.Text = "APLICAR";
+            this.boton7.texto = "APLICAR";
+            this.boton7.UseVisualStyleBackColor = false;
+            this.boton7.Click += new System.EventHandler(this.boton7_Click);
+            // 
+            // TXTmodpag
+            // 
+            this.TXTmodpag.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TXTmodpag.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXTmodpag.ForeColor = System.Drawing.Color.Green;
+            this.TXTmodpag.Location = new System.Drawing.Point(28, 44);
+            this.TXTmodpag.Name = "TXTmodpag";
+            this.TXTmodpag.Size = new System.Drawing.Size(336, 30);
+            this.TXTmodpag.TabIndex = 4;
+            this.TXTmodpag.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TXTmodpag_KeyDown);
+            this.TXTmodpag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TXTmodpag_KeyPress);
+            // 
             // consultarPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 716);
+            this.Controls.Add(this.srv);
+            this.Controls.Add(this.boton6);
+            this.Controls.Add(this.boton5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.boton4);
             this.Controls.Add(this.boton3);
@@ -249,7 +356,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.boton2);
             this.Controls.Add(this.boton1);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "consultarPagos";
             this.Text = "consultarPagos";
             this.Load += new System.EventHandler(this.consultarPagos_Load);
@@ -266,7 +372,12 @@
             this.Controls.SetChildIndex(this.boton3, 0);
             this.Controls.SetChildIndex(this.boton4, 0);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.boton5, 0);
+            this.Controls.SetChildIndex(this.boton6, 0);
+            this.Controls.SetChildIndex(this.srv, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.srv.ResumeLayout(false);
+            this.srv.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,5 +398,11 @@
         private controls.boton boton3;
         private controls.boton boton4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private controls.boton boton5;
+        private controls.boton boton6;
+        private System.Windows.Forms.GroupBox srv;
+        private controls.boton boton7;
+        private System.Windows.Forms.TextBox TXTmodpag;
+        private controls.boton boton8;
     }
 }

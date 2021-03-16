@@ -51,5 +51,5 @@ D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.applica
 D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.exe
 D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.pdb
 D:\PERSONAL PROJECTS\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.settings.resources
-D:\PERSONAL PROJECTS\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.csprojAssemblyReference.cache
 D:\PERSONAL PROJECTS\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.AboutBox.resources
+D:\PERSONAL PROJECTS\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.csprojResolveAssemblyReference.cache

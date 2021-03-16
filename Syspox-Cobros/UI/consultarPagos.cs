@@ -55,7 +55,7 @@ namespace Syspox_Cobros.UI
                 whereclause += " and p.mes='" + txtmes.Text+"'";
             }
             data data2 = new data();
-            dataGridView1.DataSource = data2.getTableCustomQuery("SELECT c.nombre as NOMBRE,p.mes as 'MES CORRESPONDIENTE',c.cedula as CEDULA,'CALLE '+upper(d.calle)+', NUMERO '+d.numero+'. '+upper(d.sector)+', '+upper(d.municipio) as DIRECCION,d.monto as TARIFA, c.telefono as TELEFONO,c.celular as CELULAR  FROM pagos as p inner join clientes as c on c.id = p.idCliente inner join direcciones d on d.id=c.addressId where " + whereclause);
+            dataGridView1.DataSource = data2.getTableCustomQuery("SELECT c.nombre as CLIENTE,c.cedula as CEDULA, mes as 'MES CORRESPONDIENTE', p.monto as PAGADO, d.monto as ESPERADO,(CAST(d.monto AS int)-CAST(p.monto AS int)) as DIFERENCIA,p.fecha as 'FECHA DEL PAGO',p.id as 'FACTURA NO.'  FROM pagos as p inner join clientes as c on c.id = p.idCliente inner join direcciones d on d.id=c.addressId where " + whereclause);
         }
 
         private void boton4_Click(object sender, EventArgs e)
@@ -75,6 +75,53 @@ namespace Syspox_Cobros.UI
             if (select.row.Cells.Count > 0)
             {
                 txtdireccion.Text = select.row.Cells[0].Value.ToString();
+            }
+        }
+
+        private void boton5_Click(object sender, EventArgs e)
+        {
+            if (data.delete("pagos", "id=" + dataGridView1.SelectedRows[0].Cells[7].Value.ToString()))
+            {
+                MessageBox.Show("Pago Eliminado Correctamente");
+                dataGridView1.DataSource = data.getTableSP("SP_getPAgos");
+            }
+        }
+
+        private void boton6_Click(object sender, EventArgs e)
+        {
+            srv.Visible = true;
+            dataGridView1.Refresh();
+            TXTmodpag.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+        }
+
+        private void boton7_Click(object sender, EventArgs e)
+        {
+            srv.Visible = false;
+            data.update("pagos", "monto=" + TXTmodpag.Text, "id=" + dataGridView1.SelectedRows[0].Cells[7].Value.ToString());
+            dataGridView1.DataSource = data.getTableSP("SP_getPAgos");
+        }
+
+        private void boton8_Click(object sender, EventArgs e)
+        {
+            srv.Visible = false;
+        }
+
+        private void TXTmodpag_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void TXTmodpag_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
             }
         }
     }

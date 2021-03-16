@@ -16,10 +16,21 @@ namespace Syspox_Cobros.UI
     {
         data data = new data();
         int pagoEsperado;
+        int id = 0;
         imprimir imprimir = new imprimir();
         public nuevopago()
         {
             InitializeComponent();
+        }
+        private void cargar(int id)
+        {
+            txtcedula.Text = data.getSingleField("cedula", "clientes", "id='" + id + "'");
+            txtnombre.Text = "modificado";
+            //txttel.Text = data.getSingleField("telefono", "clientes", "id='" + id + "'");
+            //txtcelular.Text = data.getSingleField("celular", "clientes", "id='" + id + "'");
+            //txtdireccion.Text = data.getSingleField("addressid", "clientes", "id='" + id + "'");
+            //txtcomentario.Text = data.getSingleField("comentario", "clientes", "id='" + id + "'");
+            //lbldireccion.Text = data.getAdress(txtdireccion.Text);
         }
 
         private void nuevopago_Load(object sender, EventArgs e)
