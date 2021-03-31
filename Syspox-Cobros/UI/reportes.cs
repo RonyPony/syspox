@@ -31,6 +31,10 @@ namespace Syspox_Cobros.UI
             txtmes2.DataSource = table;
             txtmes2.DisplayMember = "name";
             txtmes2.Text = "";
+
+            txtmesnotpaid.DataSource = table;
+            txtmesnotpaid.DisplayMember = "name";
+            txtmesnotpaid.Text = "";
         }
 
         private void boton6_Click(object sender, EventArgs e)
@@ -166,6 +170,19 @@ namespace Syspox_Cobros.UI
         private void groupBox4_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void boton13_Click(object sender, EventArgs e)
+        {
+            DataTable bycus = data.getTableCustomQuery("exec SP_reportMissingPaymentsByMonth'" + txtmesnotpaid.Text.Replace(" ","")+" - "+txtYear.Text + "'");
+            string res;
+            string cols = "REPORTE DE CLIENTES QUE NO HAN \n PAGADO EL MES DE "+ txtmesnotpaid.Text.Replace(" ", "").ToUpper()+ " \n ----------------------------------------- \n" + "|PERSONA|CEDULA|TELEFONO|CELULAR|DIA DE PAGO|".Replace("|", "\n") + "============================= \n";
+            res = cols + string.Join(Environment.NewLine + "--------------------------------" + Environment.NewLine, bycus.Rows.OfType<DataRow>().Select(x => string.Join("\n", x.ItemArray)));
+            if (bycus.Rows.Count <= 0)
+            {
+                res += "NO HAY DATOS";
+            }
+            print.caboom(res);
         }
     }
 }

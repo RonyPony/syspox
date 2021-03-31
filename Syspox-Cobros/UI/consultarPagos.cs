@@ -52,7 +52,7 @@ namespace Syspox_Cobros.UI
             }
             if (txtmes.Text != string.Empty)
             {
-                whereclause += " and p.mes='" + txtmes.Text+"'";
+                whereclause += " and p.mes like '%" + txtmes.Text+"%'";
             }
             data data2 = new data();
             dataGridView1.DataSource = data2.getTableCustomQuery("SELECT c.nombre as CLIENTE,c.cedula as CEDULA, mes as 'MES CORRESPONDIENTE', p.monto as PAGADO, d.monto as ESPERADO,(CAST(d.monto AS int)-CAST(p.monto AS int)) as DIFERENCIA,p.fecha as 'FECHA DEL PAGO',p.id as 'FACTURA NO.'  FROM pagos as p inner join clientes as c on c.id = p.idCliente inner join direcciones d on d.id=c.addressId where " + whereclause);

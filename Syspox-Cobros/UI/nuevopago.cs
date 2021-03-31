@@ -71,7 +71,7 @@ namespace Syspox_Cobros.UI
             {
                 string id, mes, monto, fecha, valores;
                 id = "'" + data.getCustomerId(txtcedula.Text) + "'";
-                mes = "'" + txtmes.Text + "'";
+                mes = "'" + txtmes.Text.Replace(" ","") + " - "+ txtfecha.Value.Year+"'";
                 monto = "'" + txtmonto.Text + "'";
                 fecha = "'" + txtfecha.Value.ToString() + "'";
                 valores = id + "," + mes + "," + monto + "," + fecha;
@@ -174,6 +174,15 @@ namespace Syspox_Cobros.UI
             else
             {
                 txtultimomonto.Text = "Este cliente no ha hecho pagos todavia.";
+            }
+            if (txtdireccion.Text =="0")
+            {
+                boton1.Enabled = false;
+                MessageBox.Show("Este cliente no tiene direccion asignada, por favor asigne una direccion a este cliente para poder tomar un pago");
+            }
+            else
+            {
+                boton1.Enabled = true;
             }
             
         }

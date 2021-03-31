@@ -56,10 +56,17 @@
             this.ceduladev = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.boton9 = new Syspox_Cobros.controls.boton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtYear = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtmesnotpaid = new System.Windows.Forms.ComboBox();
+            this.boton13 = new Syspox_Cobros.controls.boton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // boton1
@@ -463,11 +470,92 @@
             this.boton9.UseVisualStyleBackColor = false;
             this.boton9.Click += new System.EventHandler(this.boton9_Click);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Controls.Add(this.txtYear);
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.txtmesnotpaid);
+            this.groupBox5.Controls.Add(this.boton13);
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.Location = new System.Drawing.Point(465, 753);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(502, 152);
+            this.groupBox5.TabIndex = 23;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "CLIENTES QUE NO HAN PAGADO EL MES";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(301, 34);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 29);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "AÑO";
+            // 
+            // txtYear
+            // 
+            this.txtYear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtYear.ForeColor = System.Drawing.Color.Green;
+            this.txtYear.FormattingEnabled = true;
+            this.txtYear.Items.AddRange(new object[] {
+            "2020",
+            "2021"});
+            this.txtYear.Location = new System.Drawing.Point(375, 34);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(108, 33);
+            this.txtYear.TabIndex = 24;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(15, 34);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 29);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "MES";
+            // 
+            // txtmesnotpaid
+            // 
+            this.txtmesnotpaid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtmesnotpaid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtmesnotpaid.ForeColor = System.Drawing.Color.Green;
+            this.txtmesnotpaid.FormattingEnabled = true;
+            this.txtmesnotpaid.Location = new System.Drawing.Point(89, 34);
+            this.txtmesnotpaid.Name = "txtmesnotpaid";
+            this.txtmesnotpaid.Size = new System.Drawing.Size(194, 33);
+            this.txtmesnotpaid.TabIndex = 19;
+            // 
+            // boton13
+            // 
+            this.boton13.BackColor = System.Drawing.Color.Green;
+            this.boton13.FlatAppearance.BorderSize = 0;
+            this.boton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boton13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boton13.ForeColor = System.Drawing.Color.White;
+            this.boton13.Location = new System.Drawing.Point(20, 83);
+            this.boton13.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.boton13.Name = "boton13";
+            this.boton13.Size = new System.Drawing.Size(443, 51);
+            this.boton13.TabIndex = 2;
+            this.boton13.Text = "IMPRIMIR LOS NO PAGO";
+            this.boton13.texto = "IMPRIMIR LOS NO PAGO";
+            this.boton13.UseVisualStyleBackColor = false;
+            this.boton13.Click += new System.EventHandler(this.boton13_Click);
+            // 
             // reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1597, 1034);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.boton8);
             this.Controls.Add(this.boton7);
@@ -489,6 +577,7 @@
             this.Controls.SetChildIndex(this.boton7, 0);
             this.Controls.SetChildIndex(this.boton8, 0);
             this.Controls.SetChildIndex(this.groupBox4, 0);
+            this.Controls.SetChildIndex(this.groupBox5, 0);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -497,6 +586,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -531,5 +622,11 @@
         private controls.boton boton12;
         private System.Windows.Forms.TextBox ceduladev;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox txtYear;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox txtmesnotpaid;
+        private controls.boton boton13;
     }
 }
