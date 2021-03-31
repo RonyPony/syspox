@@ -20,6 +20,7 @@ namespace Syspox_Cobros.UI
 
         private void devoluciones_Load(object sender, EventArgs e)
         {
+            this.titulo = "Devoluciones";
             recargar();
         }
 
@@ -55,22 +56,10 @@ namespace Syspox_Cobros.UI
 
         private void boton3_Click(object sender, EventArgs e)
         {
-            selector select = new selector("direcciones");
-            select.ShowDialog();
-            if (select.row.Cells.Count > 0)
-            {
-                txtsdireccion.Text = select.row.Cells[0].Value.ToString();
-            }
         }
 
         private void boton2_Click(object sender, EventArgs e)
         {
-            selector select = new selector("direcciones");
-            select.ShowDialog();
-            if (select.row.Cells.Count > 0)
-            {
-                txtdireccion.Text = select.row.Cells[0].Value.ToString();
-            }
         }
 
         private void boton4_Click(object sender, EventArgs e)
@@ -78,15 +67,13 @@ namespace Syspox_Cobros.UI
             if (Validar())
             {
                 string idCliente, descri, monto;
-                idCliente = data.getCustomerId(txtcedula.Text);
                 descri = textBox8.Text;
                 monto = txtmonto.Text;
-                if (data.save("devoluciones", "idCliente,descripcion,monto,fecha", "'" + idCliente + "','" + descri + "','" + monto + "','"+DateTime.Now.ToString()+"'"))
+                if (data.save("devoluciones", "persona,cedula,descripcion,monto,fecha", "'" + txtnombre.Text + "','"+txtcedula.Text+"','" + descri + "','" + monto + "','"+DateTime.Now.ToString()+"'"))
                 {
                     MessageBox.Show("DEVOLUCION REGISTRADA");
                     recargar();
                     txtcedula.Clear();
-                    txtdireccion.Clear();
                     txtmonto.Clear();
                     txtnombre.Clear();
                     textBox8.Clear();
@@ -117,7 +104,7 @@ namespace Syspox_Cobros.UI
             }
             else
             {
-                MessageBox.Show("DEBE SELECCIONAR UN CLIENTE");
+                MessageBox.Show("DEBE INTRODUCIR UNA CEDULA VALIDA");
             }
 
             return false;
@@ -144,10 +131,38 @@ namespace Syspox_Cobros.UI
             else
             {
                 txtnombre.Text = info[2];
-                txtdireccion.Text = info[3];
-                label11.Text = data.getAdress(txtdireccion.Text);
             }
 
+        }
+
+        private void buscar()
+        {
+            string whereclause = "1=1";
+
+            if (txtscedula.Text != string.Empty)
+            {
+                whereclause += " and cedula= '" + txtscedula.Text + "'";
+            }
+            if (txtsnombre.Text != string.Empty)
+            {
+                whereclause += " and persona like '%" + txtsnombre.Text + "%'";
+            }
+            //if (txtmes.Text != string.Empty)
+            //{
+            //    whereclause += " and p.mes='" + txtmes.Text + "'";
+            //}
+            data data2 = new data();
+            dataGridView1.DataSource = data2.getTableCustomQuery("select cedula,persona,monto,descripcion,fecha from devoluciones where " + whereclause);
+        }
+
+        private void boton1_Click(object sender, EventArgs e)
+        {
+            buscar();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox8.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
         }
     }
 }

@@ -5,5 +5,14 @@
     <Setting Name="servername" Type="System.String" Scope="User">
       <Value Profile="(Default)">DESKTOP-8Q08EIV\SQLEXPRESS</Value>
     </Setting>
+    <Setting Name="paymentPrints" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="paymentPrintsQty" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="paymentPrintTitle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Oficina de Abogados</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -288,19 +288,19 @@ namespace Syspox_Cobros
             {
                 MessageBox.Show(e2.Message, "Unable to print", (MessageBoxButtons)System.Windows.MessageBoxButton.OK);
             }
-
         }
-
-        public void printPayment(string Cedulacliente, string paid)
+        public void printPayment(string Cedulacliente, string paid,string fechaa)
         {
             string businessName = "Colegio de abogados jose manuel".ToUpper();
             string footercustom = "este mensaje es customizable";
-            string mes, fecha, nombre, id;
+            string mes, fecha, nombre, id,direccion;
             string a = data.moneyFormat(paid);
             id = data.getCustomerId(Cedulacliente);
             mes = data.getSingleField("mes", "pagos", "idCliente=" + id + " order by fecha desc");
-            fecha = data.getSingleField("fecha", "pagos", "idCliente=" + id + " order by fecha desc");
+            fecha = fechaa;
             nombre = data.getSingleField("nombre", "clientes", "id=" + id);
+            string addressId = data.getSingleField("addressId", "clientes", "id=" + id);
+            direccion = data.getAdress(addressId);
             string company = StringLimit(businessName, 32, true);
             string linea2 = "Factura numero " + StringLimit(Guid.NewGuid().ToString(), 5, false);
             string receiptString = "==================================\n" +
@@ -320,7 +320,20 @@ namespace Syspox_Cobros
                                    "    " + mes + "\n" +
                                    "\n" +
                                    "A NOMBRE DE:                      \n" +
-                                   "    " + nombre + "\n";
+                                   "    " + nombre + "\n" +
+                                   "\n" +
+                                   "INMUEBLE:                         \n" +
+                                   "                                  \n" +
+                                   "" + autoalign(direccion, 25) +
+                                   "\n" +
+                                   "\n" +
+                                   "----------------------------------- \n" +
+                                   "CALLE COLON NO. 82, ESQ,=. JOSE DEL \n" +
+                                   "CARMEN RAMIREZ - TEL. OFIC.:\n" +
+                                   "809.557.3269 - CEL.: 809.543.8135 \n" +
+                                   "SAN JUAN DE LA MAGUANA, R.D \n" +
+                                   "OFICINAMATEO@HOTMAIL.COM";
+
 
             string footer = "----------------------------------\n" +
                                    "Total                   10000     \n";
@@ -336,32 +349,56 @@ namespace Syspox_Cobros
                 PrintDocument p = new PrintDocument();
                 p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
                 {
-                    e1.Graphics.DrawString(StringLimit("syspox systems".ToUpper(), 15, false), new Font("OCR A Extended", 20), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+                    e1.Graphics.DrawString(StringLimit(Syspox_Cobros.Properties.Settings.Default.paymentPrintTitle.ToUpper(), 19, false), new Font("Arial", 15), new SolidBrush(Color.Black), new RectangleF(0, 0, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
 
                 };
                 p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
                 {
                     e1.Graphics.DrawString(receiptString, new Font("OCR A Extended", 10), new SolidBrush(Color.Black), new RectangleF(0, 50, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+                    //e1.Graphics.DrawString(receiptString, new Font("Arial", 10), new SolidBrush(Color.Black), new RectangleF(0, 50, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
 
                 };
 
-                if (true)
+                if (Syspox_Cobros.Properties.Settings.Default.paymentPrints)
                 {
-                    System.Windows.Forms.PrintDialog pd = new System.Windows.Forms.PrintDialog();
-                    pd.Document = p;
-                    DialogResult result = pd.ShowDialog();
-
-                    if (result == System.Windows.Forms.DialogResult.OK)
+                    for (int i = 0; i < Syspox_Cobros.Properties.Settings.Default.paymentPrintsQty; i++)
                     {
-                        p.Print();
+                        System.Windows.Forms.PrintDialog pd = new System.Windows.Forms.PrintDialog();
+                        pd.Document = p;
+                        DialogResult result = pd.ShowDialog();
+
+                        if (result == System.Windows.Forms.DialogResult.OK)
+                        {
+                            p.Print();
+                        }
                     }
-                    p.Print();
                 }
             }
             catch (Exception ex)
             {
                 throw new Exception("Exception Occured While Printing", ex);
             }
+        }
+
+        private string autoalign(string direccion,int characterPerLine)
+        {
+            string final = "";
+            int i=0;
+            foreach (char item in direccion)
+            {
+                if (i==characterPerLine)
+                {
+                    final += item;
+                    final += "\n";
+                    i = 0;
+                }
+                else
+                {
+                    i++;
+                    final += item;
+                }
+            }
+            return final;
         }
     }
 }

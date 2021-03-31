@@ -64,8 +64,7 @@ namespace Syspox_Cobros.UI
         }
 
         private void boton3_Click(object sender, EventArgs e)
-        {
-            
+        {            
             DataTable clientes = data.getTableSP("SP_getClientes");
             string res = string.Join(Environment.NewLine + "--------------------------------" + Environment.NewLine, clientes.Rows.OfType<DataRow>().Select(x => string.Join(" \n ", x.ItemArray)));
             print.caboom(res);
@@ -121,6 +120,50 @@ namespace Syspox_Cobros.UI
         }
 
         private void boton5_Click(object sender, EventArgs e)
+        {
+            DataTable bycus = data.getTableCustomQuery("exec SP_reportSpecificPayment '" + cedulaespecificpayment.Text + "','"+txtmes2.Text.Replace(" ","")+"'");
+            string res;
+            string cols = "REPORTE DE PAGO DEL MES DE " + txtmes2.Text.ToUpper() + " \n ----------------------------------------- \n" + "|NOMBRE|CEDULA|FECHA|PAGADO|TARIFA|DIFERENCIA|TELEFONO|CELULAR|".Replace("|", "\n") + "============================= \n";
+            res = cols + string.Join(Environment.NewLine + "--------------------------------" + Environment.NewLine, bycus.Rows.OfType<DataRow>().Select(x => string.Join("\n", x.ItemArray)));
+            if (bycus.Rows.Count <= 0)
+            {
+                res += "NO HAY DATOS";
+            }
+            print.caboom(res);
+        }
+
+        private void boton7_Click(object sender, EventArgs e)
+        {
+            DataTable pagos = data.getTableSP("SP_getAllAdresses");
+            string res;
+            String cols = "REPORTE DE TODAS LAS DIRECCIONES \n ----------------------------------------" + "|NOMBRE|UBICACION|TARIFA|INQUILINO|CEDULA DEL INQUILINO|CONTACTO|COMENTARIOS|".Replace("|", "\n") + "============================= \n";
+            res = cols + string.Join(Environment.NewLine + "-----------------------------------------" + Environment.NewLine, pagos.Rows.OfType<DataRow>().Select(x => string.Join("\n", x.ItemArray)));
+            print.caboom(res);
+        }
+
+        private void boton8_Click(object sender, EventArgs e)
+        {
+            DataTable pagos = data.getTableSP("SP_reportAllDev");
+            string res;
+            String cols = "REPORTE DE TODAS LAS DEVOLUCIONES \n ----------------------------------------" + "|PERSONA|CEDULA|DESCRIPCION|MONTO|FECHA|".Replace("|", "\n") + "============================= \n";
+            res = cols + string.Join(Environment.NewLine + "-----------------------------------------" + Environment.NewLine, pagos.Rows.OfType<DataRow>().Select(x => string.Join("\n", x.ItemArray)));
+            print.caboom(res);
+        }
+
+        private void boton9_Click(object sender, EventArgs e)
+        {
+            DataTable bycus = data.getTableCustomQuery("exec SP_reportDevByCed'" + ceduladev.Text + "'");
+            string res;
+            string cols = "REPORTE DE DEVOLUCION " + txtmes.Text + " \n ----------------------------------------- \n" + "|PERSONA|CEDULA|DESCRIPCION|MONTO|FECHA|".Replace("|", "\n") + "============================= \n";
+            res = cols + string.Join(Environment.NewLine + "--------------------------------" + Environment.NewLine, bycus.Rows.OfType<DataRow>().Select(x => string.Join("\n", x.ItemArray)));
+            if (bycus.Rows.Count <= 0)
+            {
+                res += "NO HAY DATOS";
+            }
+            print.caboom(res);
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
         {
 
         }

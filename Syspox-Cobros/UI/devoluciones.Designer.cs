@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtsnombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtscedula = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.boton3 = new Syspox_Cobros.controls.boton();
-            this.txtsdireccion = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.boton1 = new Syspox_Cobros.controls.boton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.boton6 = new Syspox_Cobros.controls.boton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.boton7 = new Syspox_Cobros.controls.boton();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -47,17 +45,13 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtmonto = new System.Windows.Forms.TextBox();
-            this.boton2 = new Syspox_Cobros.controls.boton();
             this.boton4 = new Syspox_Cobros.controls.boton();
             this.txtcedula = new System.Windows.Forms.TextBox();
-            this.txtdireccion = new System.Windows.Forms.TextBox();
             this.txtnombre = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.boton5 = new Syspox_Cobros.controls.boton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -103,43 +97,6 @@
             this.label3.TabIndex = 25;
             this.label3.Text = "CEDULA";
             // 
-            // boton3
-            // 
-            this.boton3.BackColor = System.Drawing.Color.Green;
-            this.boton3.FlatAppearance.BorderSize = 0;
-            this.boton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.boton3.ForeColor = System.Drawing.Color.White;
-            this.boton3.Location = new System.Drawing.Point(393, 159);
-            this.boton3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.boton3.Name = "boton3";
-            this.boton3.Size = new System.Drawing.Size(139, 30);
-            this.boton3.TabIndex = 41;
-            this.boton3.Text = "SELECCIONAR";
-            this.boton3.texto = "SELECCIONAR";
-            this.boton3.UseVisualStyleBackColor = false;
-            this.boton3.Click += new System.EventHandler(this.boton3_Click);
-            // 
-            // txtsdireccion
-            // 
-            this.txtsdireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsdireccion.ForeColor = System.Drawing.Color.Green;
-            this.txtsdireccion.Location = new System.Drawing.Point(196, 156);
-            this.txtsdireccion.Name = "txtsdireccion";
-            this.txtsdireccion.Size = new System.Drawing.Size(188, 30);
-            this.txtsdireccion.TabIndex = 40;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(35, 156);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(155, 29);
-            this.label7.TabIndex = 39;
-            this.label7.Text = "DIRECCION";
-            // 
             // boton1
             // 
             this.boton1.BackColor = System.Drawing.Color.Green;
@@ -155,19 +112,17 @@
             this.boton1.Text = "BUSCAR";
             this.boton1.texto = "BUSCAR";
             this.boton1.UseVisualStyleBackColor = false;
+            this.boton1.Click += new System.EventHandler(this.boton1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.boton6);
-            this.groupBox1.Controls.Add(this.boton3);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.boton1);
             this.groupBox1.Controls.Add(this.txtscedula);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtsdireccion);
             this.groupBox1.Controls.Add(this.txtsnombre);
-            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Location = new System.Drawing.Point(12, 60);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(604, 234);
@@ -202,17 +157,25 @@
             this.groupBox2.Controls.Add(this.textBox8);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.txtmonto);
-            this.groupBox2.Controls.Add(this.boton2);
             this.groupBox2.Controls.Add(this.boton4);
             this.groupBox2.Controls.Add(this.txtcedula);
-            this.groupBox2.Controls.Add(this.txtdireccion);
             this.groupBox2.Controls.Add(this.txtnombre);
-            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(622, 60);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(604, 597);
             this.groupBox2.TabIndex = 45;
             this.groupBox2.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(35, 174);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(202, 29);
+            this.label11.TabIndex = 48;
+            this.label11.Text = "---------------------";
             // 
             // boton7
             // 
@@ -294,23 +257,6 @@
             this.txtmonto.Size = new System.Drawing.Size(188, 30);
             this.txtmonto.TabIndex = 44;
             // 
-            // boton2
-            // 
-            this.boton2.BackColor = System.Drawing.Color.Green;
-            this.boton2.FlatAppearance.BorderSize = 0;
-            this.boton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
-            this.boton2.ForeColor = System.Drawing.Color.White;
-            this.boton2.Location = new System.Drawing.Point(402, 156);
-            this.boton2.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.boton2.Name = "boton2";
-            this.boton2.Size = new System.Drawing.Size(139, 30);
-            this.boton2.TabIndex = 41;
-            this.boton2.Text = "SELECCIONAR";
-            this.boton2.texto = "SELECCIONAR";
-            this.boton2.UseVisualStyleBackColor = false;
-            this.boton2.Click += new System.EventHandler(this.boton2_Click);
-            // 
             // boton4
             // 
             this.boton4.BackColor = System.Drawing.Color.Green;
@@ -338,15 +284,6 @@
             this.txtcedula.TabIndex = 26;
             this.txtcedula.TextChanged += new System.EventHandler(this.txtcedula_TextChanged);
             // 
-            // txtdireccion
-            // 
-            this.txtdireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdireccion.ForeColor = System.Drawing.Color.Green;
-            this.txtdireccion.Location = new System.Drawing.Point(196, 156);
-            this.txtdireccion.Name = "txtdireccion";
-            this.txtdireccion.Size = new System.Drawing.Size(188, 30);
-            this.txtdireccion.TabIndex = 40;
-            // 
             // txtnombre
             // 
             this.txtnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -355,17 +292,6 @@
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(188, 30);
             this.txtnombre.TabIndex = 28;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(35, 156);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 29);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "DIRECCION";
             // 
             // label1
             // 
@@ -416,14 +342,14 @@
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Green;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Green;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(12, 331);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -432,17 +358,7 @@
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(604, 326);
             this.dataGridView1.TabIndex = 87;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(35, 205);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(202, 29);
-            this.label11.TabIndex = 48;
-            this.label11.Text = "---------------------";
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // devoluciones
             // 
@@ -453,7 +369,6 @@
             this.Controls.Add(this.boton5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "devoluciones";
             this.Text = "devoluciones";
             this.Load += new System.EventHandler(this.devoluciones_Load);
@@ -476,9 +391,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtscedula;
         private System.Windows.Forms.Label label3;
-        private controls.boton boton3;
-        private System.Windows.Forms.TextBox txtsdireccion;
-        private System.Windows.Forms.Label label7;
         private controls.boton boton1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -486,14 +398,11 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtmonto;
-        private controls.boton boton2;
         private System.Windows.Forms.Label label1;
         private controls.boton boton4;
         private System.Windows.Forms.TextBox txtcedula;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtdireccion;
         private System.Windows.Forms.TextBox txtnombre;
-        private System.Windows.Forms.Label label5;
         private controls.boton boton5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;

@@ -49,6 +49,7 @@
             this.txtultimomonto = new System.Windows.Forms.Label();
             this.boton10 = new Syspox_Cobros.controls.boton();
             this.boton4 = new Syspox_Cobros.controls.boton();
+            this.txtfechadepago = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -329,11 +330,25 @@
             this.boton4.UseVisualStyleBackColor = false;
             this.boton4.Visible = false;
             // 
+            // txtfechadepago
+            // 
+            this.txtfechadepago.AutoSize = true;
+            this.txtfechadepago.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtfechadepago.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfechadepago.ForeColor = System.Drawing.Color.White;
+            this.txtfechadepago.Location = new System.Drawing.Point(0, 82);
+            this.txtfechadepago.Name = "txtfechadepago";
+            this.txtfechadepago.Size = new System.Drawing.Size(391, 29);
+            this.txtfechadepago.TabIndex = 72;
+            this.txtfechadepago.Text = "FECHA DE PAGO DEL CLIENTE";
+            this.txtfechadepago.Click += new System.EventHandler(this.label1_Click);
+            // 
             // nuevopago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1087, 802);
+            this.Controls.Add(this.txtfechadepago);
             this.Controls.Add(this.boton4);
             this.Controls.Add(this.boton10);
             this.Controls.Add(this.txtultimomonto);
@@ -379,6 +394,7 @@
             this.Controls.SetChildIndex(this.txtultimomonto, 0);
             this.Controls.SetChildIndex(this.boton10, 0);
             this.Controls.SetChildIndex(this.boton4, 0);
+            this.Controls.SetChildIndex(this.txtfechadepago, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -408,5 +424,6 @@
         private System.Windows.Forms.Label txtultimomonto;
         private controls.boton boton10;
         private controls.boton boton4;
+        private System.Windows.Forms.Label txtfechadepago;
     }
 }

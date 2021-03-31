@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.boton3 = new Syspox_Cobros.controls.boton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtmes = new System.Windows.Forms.ComboBox();
             this.boton4 = new Syspox_Cobros.controls.boton();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.ceduladev = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.boton9 = new Syspox_Cobros.controls.boton();
-            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -70,7 +70,7 @@
             this.boton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boton1.ForeColor = System.Drawing.Color.White;
-            this.boton1.Location = new System.Drawing.Point(13, 57);
+            this.boton1.Location = new System.Drawing.Point(177, 96);
             this.boton1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.boton1.Name = "boton1";
             this.boton1.Size = new System.Drawing.Size(443, 51);
@@ -88,7 +88,7 @@
             this.groupBox1.Controls.Add(this.txtpagoscedula);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(13, 140);
+            this.groupBox1.Location = new System.Drawing.Point(177, 179);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(502, 152);
             this.groupBox1.TabIndex = 1;
@@ -159,7 +159,7 @@
             this.boton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boton3.ForeColor = System.Drawing.Color.White;
-            this.boton3.Location = new System.Drawing.Point(33, 325);
+            this.boton3.Location = new System.Drawing.Point(197, 364);
             this.boton3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.boton3.Name = "boton3";
             this.boton3.Size = new System.Drawing.Size(443, 51);
@@ -176,12 +176,23 @@
             this.groupBox2.Controls.Add(this.txtmes);
             this.groupBox2.Controls.Add(this.boton4);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(549, 57);
+            this.groupBox2.Location = new System.Drawing.Point(717, 90);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(502, 152);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "PAGOS DE UN MES";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(33, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 29);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "MES";
             // 
             // txtmes
             // 
@@ -231,9 +242,8 @@
             this.groupBox3.Controls.Add(this.txtmes2);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.boton5);
-            this.groupBox3.Enabled = false;
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(549, 237);
+            this.groupBox3.Location = new System.Drawing.Point(717, 262);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(502, 230);
             this.groupBox3.TabIndex = 20;
@@ -336,7 +346,7 @@
             this.boton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boton6.ForeColor = System.Drawing.Color.White;
-            this.boton6.Location = new System.Drawing.Point(33, 533);
+            this.boton6.Location = new System.Drawing.Point(33, 753);
             this.boton6.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.boton6.Name = "boton6";
             this.boton6.Size = new System.Drawing.Size(158, 51);
@@ -350,12 +360,11 @@
             // 
             this.boton7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.boton7.BackColor = System.Drawing.Color.Green;
-            this.boton7.Enabled = false;
             this.boton7.FlatAppearance.BorderSize = 0;
             this.boton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boton7.ForeColor = System.Drawing.Color.White;
-            this.boton7.Location = new System.Drawing.Point(1084, 69);
+            this.boton7.Location = new System.Drawing.Point(177, 425);
             this.boton7.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.boton7.Name = "boton7";
             this.boton7.Size = new System.Drawing.Size(498, 51);
@@ -363,17 +372,17 @@
             this.boton7.Text = "IMPRIMIR TODAS LAS DIRECCIONES";
             this.boton7.texto = "IMPRIMIR TODAS LAS DIRECCIONES";
             this.boton7.UseVisualStyleBackColor = false;
+            this.boton7.Click += new System.EventHandler(this.boton7_Click);
             // 
             // boton8
             // 
             this.boton8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.boton8.BackColor = System.Drawing.Color.Green;
-            this.boton8.Enabled = false;
             this.boton8.FlatAppearance.BorderSize = 0;
             this.boton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.boton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boton8.ForeColor = System.Drawing.Color.White;
-            this.boton8.Location = new System.Drawing.Point(1084, 140);
+            this.boton8.Location = new System.Drawing.Point(160, 486);
             this.boton8.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.boton8.Name = "boton8";
             this.boton8.Size = new System.Drawing.Size(498, 51);
@@ -381,6 +390,7 @@
             this.boton8.Text = "IMPRIMIR TODAS LAS DEVOLUCIONES";
             this.boton8.texto = "IMPRIMIR TODAS LAS DEVOLUCIONES";
             this.boton8.UseVisualStyleBackColor = false;
+            this.boton8.Click += new System.EventHandler(this.boton8_Click);
             // 
             // groupBox4
             // 
@@ -389,14 +399,14 @@
             this.groupBox4.Controls.Add(this.ceduladev);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.boton9);
-            this.groupBox4.Enabled = false;
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(1069, 237);
+            this.groupBox4.Location = new System.Drawing.Point(465, 565);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(502, 169);
             this.groupBox4.TabIndex = 21;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "DEVOLUCIONES DE UN CLIENTE";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // boton12
             // 
@@ -451,23 +461,13 @@
             this.boton9.Text = "IMPRIMIR PAGOS ESPECIFICOS";
             this.boton9.texto = "IMPRIMIR PAGOS ESPECIFICOS";
             this.boton9.UseVisualStyleBackColor = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(33, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 29);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "MES";
+            this.boton9.Click += new System.EventHandler(this.boton9_Click);
             // 
             // reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1597, 595);
+            this.ClientSize = new System.Drawing.Size(1597, 1034);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.boton8);
             this.Controls.Add(this.boton7);
@@ -477,7 +477,6 @@
             this.Controls.Add(this.boton3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.boton1);
-            this.Location = new System.Drawing.Point(0, 0);
             this.Name = "reportes";
             this.Text = "reportes";
             this.Load += new System.EventHandler(this.reportes_Load);

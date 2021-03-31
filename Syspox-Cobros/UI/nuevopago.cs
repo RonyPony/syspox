@@ -35,6 +35,7 @@ namespace Syspox_Cobros.UI
 
         private void nuevopago_Load(object sender, EventArgs e)
         {
+            
             this.titulo = "nuevo pago";
             DataTable table = data.getTable("meses", string.Empty);
             txtmes.DataSource = table;
@@ -74,11 +75,14 @@ namespace Syspox_Cobros.UI
                 monto = "'" + txtmonto.Text + "'";
                 fecha = "'" + txtfecha.Value.ToString() + "'";
                 valores = id + "," + mes + "," + monto + "," + fecha;
-                if (data.save("pagos", "idCliente,mes,monto,fecha", valores))
+                if (validateMonth(mes,id))
                 {
-                    MessageBox.Show("Pago hecho con exito");
-                    imprimir.printPayment(txtcedula.Text,txtmonto.Text);
-                    this.Close();
+                    if (data.save("pagos", "idCliente,mes,monto,fecha", valores))
+                    {
+                        MessageBox.Show("Pago hecho con exito");
+                        imprimir.printPayment(txtcedula.Text, txtmonto.Text,txtfecha.Value.ToString());
+                        this.Close();
+                    }
                 }
             }
             catch (Exception ex)
@@ -87,7 +91,48 @@ namespace Syspox_Cobros.UI
             }
         }
 
+        private bool validateMonth(string mes,string user)
+        {
+            try
+            {
+                data data = new data();
+                DataTable tableAll= data.getTable("pagos","idCliente="+user);
+                List<String> meses = new List<string>();
+                List<String> rawdates = new List<string>();
+                foreach (DataRow ddfrs in tableAll.Rows)
+                {
+                    DateTime ggo = Convert.ToDateTime(ddfrs[4].ToString().ToUpper());
+                    meses.Add(ddfrs[2].ToString().Replace(" ","").ToLower()+"-"+ggo.Year.ToString());
+                }
+                string pal = mes.Replace(" ", "").Replace("'","").ToLower() +"-"+ (txtfecha.Value.Year.ToString());
+                if (meses.Contains(pal))
+                {
+                    MessageBox.Show("ESTE CLIENTE YA HA PAGADO EL MES DE " + pal.Replace("-"," del año ").ToUpper());
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+                
+                //m = mes.Replace(" ","").ToLower();
+                //l = last.Replace(" ", "").ToLower();
+                //if (m == l && fec.Year == DateTime.Now.Year)
+                //{
+                //    MessageBox.Show("ESTE CLIENTE YA HA PAGADO EL MES DE "+m.ToLowerInvariant());
+                //    return false;
+                //}
+                //else
+                //{
+                //    return true;
+                //}
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }
 
         private void txtcedula_TextChanged(object sender, EventArgs e)
         {
@@ -109,6 +154,7 @@ namespace Syspox_Cobros.UI
                 lblmonto.Text = "Restante RD$:"+data.getAdressMonto(txtdireccion.Text);
                 pagoEsperado = Convert.ToInt32(data.getAdressMonto(txtdireccion.Text));
                 lbldireccion.Text = data.getAdress(txtdireccion.Text);
+                txtfechadepago.Text ="A este cliente le corresponde pagar el "+ data.getSingleField("diaDePago", "clientes", "cedula='" + txtcedula.Text + "'") +" de "+ data.getSingleField("mesDePago", "clientes", "cedula='" + txtcedula.Text + "'");
             }
             
         }
@@ -119,9 +165,17 @@ namespace Syspox_Cobros.UI
             id = data.getCustomerId(txtcedula.Text);
             mes = data.getSingleField("mes","pagos","idCliente="+id+ " order by fecha desc");
             monto = data.getSingleField("monto","pagos","idCliente="+id+ " order by fecha desc");
-            txtultimomonto.Text = "Ultimo pago recibido fue del mes de "+mes+" por un monto de "+monto;
-            txtmes.Text = mes;
-            txtmes.DroppedDown = true;
+            if (mes!=null)
+            {
+                txtultimomonto.Text = "Ultimo pago recibido fue del mes de " + mes + " por un monto de " + monto;
+                txtmes.Text = mes;
+                txtmes.DroppedDown = true;
+            }
+            else
+            {
+                txtultimomonto.Text = "Este cliente no ha hecho pagos todavia.";
+            }
+            
         }
 
         private void txtmonto_TextChanged(object sender, EventArgs e)
@@ -164,5 +218,13 @@ namespace Syspox_Cobros.UI
                 e.Handled = true;
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
+
+

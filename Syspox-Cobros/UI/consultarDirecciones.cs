@@ -58,5 +58,38 @@ namespace Syspox_Cobros.UI
                 e.Handled = true;
             }
         }
+
+        private void boton1_Click(object sender, EventArgs e)
+        {
+            buscar();
+        }
+
+        private void buscar()
+        {
+            string whereclause = "1=1";
+
+            if (txtnombre.Text != string.Empty)
+            {
+                whereclause += " and nombre like '%" + txtnombre.Text + "%'";
+            }
+            if (txtmonto.Text != string.Empty)
+            {
+                whereclause += " and monto = '" + txtmonto.Text + "'";
+            }
+            if (txtcalle.Text != string.Empty)
+            {
+                whereclause += " and calle like '%"+ txtcalle.Text+"%'";
+            }
+            if (txtnumero.Text != string.Empty)
+            {
+                whereclause += " and numero ='" + txtnumero.Text + "'";
+            }
+            if (txtsector.Text != string.Empty)
+            {
+                whereclause += " and sector like '%" + txtsector.Text + "%'";
+            }
+            data data2 = new data();
+            dataGridView1.DataSource = data2.getTableCustomQuery("select * from direcciones where " + whereclause);
+        }
     }
 }

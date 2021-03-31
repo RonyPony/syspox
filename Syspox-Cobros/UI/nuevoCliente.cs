@@ -33,13 +33,18 @@ namespace Syspox_Cobros.UI
             txtcelular.Text = data.getSingleField("celular","clientes","id='"+id+"'");
             txtdireccion.Text = data.getSingleField("addressid", "clientes", "id='" + id + "'");
             txtcomentario.Text = data.getSingleField("comentario","clientes","id='"+id+"'");
+            txtdiapago.Text = data.getSingleField("diaDePago", "clientes", "id='" + id + "'");
+            txtmes.Text = data.getSingleField("mesDePago", "clientes", "id='" + id + "'");
             lbldireccion.Text = data.getAdress(txtdireccion.Text);
         }
 
         private void nuevoCliente_Load(object sender, EventArgs e)
         {
             this.titulo = "nuevo cliente";
-
+            DataTable table = data.getTable("meses", string.Empty);
+            txtmes.DataSource = table;
+            txtmes.DisplayMember = "name";
+            //txtmes.Text = "";
         }
 
         private void boton2_Click(object sender, EventArgs e)
@@ -54,7 +59,7 @@ namespace Syspox_Cobros.UI
                 if (id == 0)
                 {
                     data data = new data();
-                    if (data.save("clientes", "cedula,nombre,addressid,telefono,celular,comentario", "'" + txtcedula.Text + "','" + txtnombre.Text + "','" + txtdireccion.Text + "','" + txttel.Text + "','" + txtcelular.Text + "','" + txtcomentario.Text + "'"))
+                    if (data.save("clientes", "cedula,nombre,addressid,telefono,celular,comentario,mesDePago ,diaDePago", "'" + txtcedula.Text + "','" + txtnombre.Text + "','" + txtdireccion.Text + "','" + txttel.Text + "','" + txtcelular.Text + "','" + txtcomentario.Text + "','"+txtmes.Text+"','"+txtdiapago.Text+"'"))
                     {
                         MessageBox.Show("Cliente Registrado");
 
@@ -68,7 +73,7 @@ namespace Syspox_Cobros.UI
                 else
                 {
                     data data = new data();
-                    if (data.update("clientes", "cedula = '"+txtcedula.Text+"',nombre='"+txtnombre.Text+"',addressid='"+txtdireccion.Text+"',telefono='"+txttel.Text+"',celular='"+txtcelular.Text+"',comentario='"+txtcomentario.Text+"'","id="+id))
+                    if (data.update("clientes", "cedula = '"+txtcedula.Text+"',nombre='"+txtnombre.Text+"',addressid='"+txtdireccion.Text+"',telefono='"+txttel.Text+"',celular='"+txtcelular.Text+"',comentario='"+txtcomentario.Text+ "',mesDePago='"+txtmes.Text+ "',diaDePago='"+txtdiapago.Text+"'", "id="+id))
                     {
                         MessageBox.Show("Cliente Actualizado");
 
@@ -114,6 +119,25 @@ namespace Syspox_Cobros.UI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtcedula_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
             }
         }
     }

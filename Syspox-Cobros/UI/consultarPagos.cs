@@ -89,9 +89,15 @@ namespace Syspox_Cobros.UI
 
         private void boton6_Click(object sender, EventArgs e)
         {
-            srv.Visible = true;
-            dataGridView1.Refresh();
-            TXTmodpag.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            try
+            {
+                srv.Visible = true;
+                dataGridView1.Refresh();
+                TXTmodpag.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void boton7_Click(object sender, EventArgs e)

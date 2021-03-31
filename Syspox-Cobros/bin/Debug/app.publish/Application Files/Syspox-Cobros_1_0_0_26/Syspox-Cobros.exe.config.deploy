@@ -13,6 +13,15 @@
             <setting name="servername" serializeAs="String">
                 <value>DESKTOP-8Q08EIV\SQLEXPRESS</value>
             </setting>
+            <setting name="paymentPrints" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="paymentPrintsQty" serializeAs="String">
+                <value>3</value>
+            </setting>
+            <setting name="paymentPrintTitle" serializeAs="String">
+                <value>Oficina de Abogados</value>
+            </setting>
         </Syspox_Cobros.Properties.Settings>
     </userSettings>
 </configuration>
