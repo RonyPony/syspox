@@ -296,7 +296,7 @@ namespace Syspox_Cobros
             string mes, fecha, nombre, id,direccion;
             string a = data.moneyFormat(paid);
             id = data.getCustomerId(Cedulacliente);
-            mes = data.getSingleField("mes", "pagos", "idCliente=" + id + " order by fecha desc");
+            mes = data.getSingleField("mes", "pagos", "idCliente=" + id + " and fecha='"+fechaa+"' order by fecha desc");
             fecha = fechaa;
             nombre = data.getSingleField("nombre", "clientes", "id=" + id);
             string addressId = data.getSingleField("addressId", "clientes", "id=" + id);
