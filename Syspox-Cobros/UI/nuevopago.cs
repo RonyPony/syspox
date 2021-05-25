@@ -104,10 +104,10 @@ namespace Syspox_Cobros.UI
                     DateTime ggo = Convert.ToDateTime(ddfrs[4].ToString().ToUpper());
                     meses.Add(ddfrs[2].ToString().Replace(" ","").ToLower()+"-"+ggo.Year.ToString());
                 }
-                string pal = mes.Replace(" ", "").Replace("'","").ToLower() +"-"+ (txtfecha.Value.Year.ToString());
+                string pal = mes.Replace(" ", "").Replace("'","").ToLower();
                 if (meses.Contains(pal))
                 {
-                    MessageBox.Show("ESTE CLIENTE YA HA PAGADO EL MES DE " + pal.Replace("-"," del año ").ToUpper());
+                    MessageBox.Show("ESTE CLIENTE YA HA PAGADO EL MES DE " + pal.ToUpper());
                     return false;
                 }
                 else

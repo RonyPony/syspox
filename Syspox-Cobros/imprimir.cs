@@ -291,7 +291,7 @@ namespace Syspox_Cobros
         }
         public void printPayment(string Cedulacliente, string paid,string fechaa)
         {
-            string businessName = "Colegio de abogados jose manuel".ToUpper();
+            string businessName = "recibo de pago numero - ".ToUpper()+getID();
             string footercustom = "este mensaje es customizable";
             string mes, fecha, nombre, id,direccion;
             string a = data.moneyFormat(paid);
@@ -378,6 +378,12 @@ namespace Syspox_Cobros
             {
                 throw new Exception("Exception Occured While Printing", ex);
             }
+        }
+
+        private string getID()
+        {
+            string id = data.getSingleField("id", "pagos", "1=1 order by id desc");
+            return id;
         }
 
         private string autoalign(string direccion,int characterPerLine)
