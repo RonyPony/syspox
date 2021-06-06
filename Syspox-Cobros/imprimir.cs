@@ -354,7 +354,7 @@ namespace Syspox_Cobros
                 };
                 p.PrintPage += delegate (object sender1, PrintPageEventArgs e1)
                 {
-                    e1.Graphics.DrawString(receiptString, new Font("OCR A Extended", 10), new SolidBrush(Color.Black), new RectangleF(0, 50, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
+                    e1.Graphics.DrawString(receiptString, new Font("Arial", 10), new SolidBrush(Color.Black), new RectangleF(0, 50, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
                     //e1.Graphics.DrawString(receiptString, new Font("Arial", 10), new SolidBrush(Color.Black), new RectangleF(0, 50, p.DefaultPageSettings.PrintableArea.Width, p.DefaultPageSettings.PrintableArea.Height));
 
                 };
