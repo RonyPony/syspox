@@ -1,55 +1,74 @@
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\bin\Debug\Syspox-Cobros.exe.config
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\bin\Debug\Syspox-Cobros.exe
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\bin\Debug\Syspox-Cobros.pdb
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.Properties.Resources.resources
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.splash.resources
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.csproj.GenerateResource.cache
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.csproj.CoreCompileInputs.cache
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.exe
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.pdb
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.BASEFORM.resources
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.LOGIN.resources
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.controls.boton.resources
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.mainMenu.resources
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\bin\Debug\Syspox-Cobros.exe.manifest
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\bin\Debug\Syspox-Cobros.application
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.exe.manifest
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.application
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.nuevopago.resources
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.consultarPagos.resources
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.nuevoCliente.resources
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.consultarClientes.resources
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.consultarDirecciones.resources
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.devoluciones.resources
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.nuevaDireccion.resources
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.reportes.resources
-D:\personal projects\sysprox-cobros\Syspox-Cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.selector.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\bin\Debug\Syspox-Cobros.exe.config
-D:\personal projects\syspox-cobros\Syspox-Cobros\bin\Debug\Syspox-Cobros.exe.manifest
-D:\personal projects\syspox-cobros\Syspox-Cobros\bin\Debug\Syspox-Cobros.application
-D:\personal projects\syspox-cobros\Syspox-Cobros\bin\Debug\Syspox-Cobros.exe
-D:\personal projects\syspox-cobros\Syspox-Cobros\bin\Debug\Syspox-Cobros.pdb
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.controls.boton.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.Properties.Resources.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.BASEFORM.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.consultarClientes.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.consultarDirecciones.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.consultarPagos.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.devoluciones.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.LOGIN.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.mainMenu.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.nuevaDireccion.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.nuevoCliente.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.nuevopago.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.reportes.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.selector.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.splash.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.csproj.GenerateResource.cache
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.csproj.CoreCompileInputs.cache
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.exe.manifest
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.application
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.exe
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.pdb
-D:\PERSONAL PROJECTS\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.settings.resources
-D:\PERSONAL PROJECTS\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox_Cobros.UI.AboutBox.resources
-D:\PERSONAL PROJECTS\syspox-cobros\Syspox-Cobros\obj\Debug\Syspox-Cobros.csprojAssemblyReference.cache
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/bin/Debug/Syspox-Cobros.exe.config
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/bin/Debug/Syspox-Cobros.exe
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/bin/Debug/Syspox-Cobros.pdb
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.Properties.Resources.resources
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.splash.resources
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox-Cobros.csproj.GenerateResource.cache
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox-Cobros.csproj.CoreCompileInputs.cache
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox-Cobros.exe
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox-Cobros.pdb
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.BASEFORM.resources
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.LOGIN.resources
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.controls.boton.resources
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.mainMenu.resources
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/bin/Debug/Syspox-Cobros.exe.manifest
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/bin/Debug/Syspox-Cobros.application
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox-Cobros.exe.manifest
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox-Cobros.application
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.nuevopago.resources
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.consultarPagos.resources
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.nuevoCliente.resources
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.consultarClientes.resources
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.consultarDirecciones.resources
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.devoluciones.resources
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.nuevaDireccion.resources
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.reportes.resources
+D:/personal projects/sysprox-cobros/Syspox-Cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.selector.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/bin/Debug/Syspox-Cobros.exe.config
+D:/personal projects/syspox-cobros/Syspox-Cobros/bin/Debug/Syspox-Cobros.exe.manifest
+D:/personal projects/syspox-cobros/Syspox-Cobros/bin/Debug/Syspox-Cobros.application
+D:/personal projects/syspox-cobros/Syspox-Cobros/bin/Debug/Syspox-Cobros.exe
+D:/personal projects/syspox-cobros/Syspox-Cobros/bin/Debug/Syspox-Cobros.pdb
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.controls.boton.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.Properties.Resources.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.BASEFORM.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.consultarClientes.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.consultarDirecciones.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.consultarPagos.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.devoluciones.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.LOGIN.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.mainMenu.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.nuevaDireccion.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.nuevoCliente.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.nuevopago.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.reportes.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.selector.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.splash.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox-Cobros.csproj.GenerateResource.cache
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox-Cobros.csproj.CoreCompileInputs.cache
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox-Cobros.exe.manifest
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox-Cobros.application
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox-Cobros.exe
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox-Cobros.pdb
+D:/PERSONAL PROJECTS/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.settings.resources
+D:/PERSONAL PROJECTS/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.AboutBox.resources
+D:/PERSONAL PROJECTS/syspox-cobros/Syspox-Cobros/obj/Debug/Syspox-Cobros.csprojAssemblyReference.cache
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox-Cobros.csproj.AssemblyReference.cache
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.controls.boton.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.Properties.Resources.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.AboutBox.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.BASEFORM.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.consultarClientes.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.consultarDirecciones.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.consultarPagos.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.devoluciones.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.LOGIN.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.mainMenu.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.nuevaDireccion.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.nuevoCliente.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.nuevopago.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.reportes.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.selector.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.UI.settings.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox_Cobros.splash.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Debug/Syspox-Cobros.csproj.GenerateResource.cache

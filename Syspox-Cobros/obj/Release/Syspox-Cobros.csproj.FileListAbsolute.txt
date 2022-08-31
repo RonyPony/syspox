@@ -1,26 +1,46 @@
-D:\personal projects\syspox-cobros\Syspox-Cobros\bin\Release\Syspox-Cobros.exe.config
-D:\personal projects\syspox-cobros\Syspox-Cobros\bin\Release\Syspox-Cobros.exe.manifest
-D:\personal projects\syspox-cobros\Syspox-Cobros\bin\Release\Syspox-Cobros.application
-D:\personal projects\syspox-cobros\Syspox-Cobros\bin\Release\Syspox-Cobros.exe
-D:\personal projects\syspox-cobros\Syspox-Cobros\bin\Release\Syspox-Cobros.pdb
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.controls.boton.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.Properties.Resources.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.UI.BASEFORM.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.UI.consultarClientes.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.UI.consultarDirecciones.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.UI.consultarPagos.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.UI.devoluciones.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.UI.LOGIN.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.UI.mainMenu.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.UI.nuevaDireccion.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.UI.nuevoCliente.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.UI.nuevopago.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.UI.reportes.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.UI.selector.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox_Cobros.splash.resources
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox-Cobros.csproj.GenerateResource.cache
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox-Cobros.csproj.CoreCompileInputs.cache
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox-Cobros.exe.manifest
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox-Cobros.application
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox-Cobros.exe
-D:\personal projects\syspox-cobros\Syspox-Cobros\obj\Release\Syspox-Cobros.pdb
+D:/personal projects/syspox-cobros/Syspox-Cobros/bin/Release/Syspox-Cobros.exe.config
+D:/personal projects/syspox-cobros/Syspox-Cobros/bin/Release/Syspox-Cobros.exe.manifest
+D:/personal projects/syspox-cobros/Syspox-Cobros/bin/Release/Syspox-Cobros.application
+D:/personal projects/syspox-cobros/Syspox-Cobros/bin/Release/Syspox-Cobros.exe
+D:/personal projects/syspox-cobros/Syspox-Cobros/bin/Release/Syspox-Cobros.pdb
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.controls.boton.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.Properties.Resources.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.BASEFORM.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.consultarClientes.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.consultarDirecciones.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.consultarPagos.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.devoluciones.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.LOGIN.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.mainMenu.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.nuevaDireccion.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.nuevoCliente.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.nuevopago.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.reportes.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.selector.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox_Cobros.splash.resources
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox-Cobros.csproj.GenerateResource.cache
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox-Cobros.csproj.CoreCompileInputs.cache
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox-Cobros.exe.manifest
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox-Cobros.application
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox-Cobros.exe
+D:/personal projects/syspox-cobros/Syspox-Cobros/obj/Release/Syspox-Cobros.pdb
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox-Cobros.csproj.AssemblyReference.cache
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.controls.boton.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.Properties.Resources.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.AboutBox.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.BASEFORM.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.consultarClientes.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.consultarDirecciones.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.consultarPagos.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.devoluciones.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.LOGIN.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.mainMenu.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.nuevaDireccion.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.nuevoCliente.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.nuevopago.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.reportes.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.selector.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.UI.settings.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox_Cobros.splash.resources
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox-Cobros.csproj.GenerateResource.cache
+/Users/rony/projects/syspox/Syspox-Cobros/obj/Release/Syspox-Cobros.pdb
